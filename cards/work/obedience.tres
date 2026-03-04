@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="CardStats" format=3 uid="uid://divw1i7qemv04"]
+
+[ext_resource type="Script" uid="uid://oxdfipc21itw" path="res://cards/modifier.gd" id="1_s555d"]
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card_stats.gd" id="2_nxrkd"]
+
+[sub_resource type="Resource" id="Resource_f61jr"]
+script = ExtResource("1_s555d")
+amount = 2
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_jsqqk"]
+script = ExtResource("1_s555d")
+type = 1
+amount = 2
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_nwj5s"]
+script = ExtResource("1_s555d")
+type = 2
+amount = -2
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_hel13"]
+script = ExtResource("1_s555d")
+type = 3
+amount = 2
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[resource]
+script = ExtResource("2_nxrkd")
+modifiers = Array[ExtResource("1_s555d")]([SubResource("Resource_f61jr"), SubResource("Resource_jsqqk"), SubResource("Resource_nwj5s"), SubResource("Resource_hel13")])
+metadata/_custom_type_script = "uid://dl871qa6mawf3"

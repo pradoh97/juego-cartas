@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bhunogn8hbghq"]
+
+[ext_resource type="Script" uid="uid://ksssuwe6mmhk" path="res://cards/card_options.gd" id="1_hkvdl"]
+[ext_resource type="PackedScene" uid="uid://bfywjnn4mwwee" path="res://cards/card.tscn" id="1_uxvtg"]
+[ext_resource type="Script" uid="uid://bpx0dut7j3d7x" path="res://cards/card_option.gd" id="2_1mgha"]
+[ext_resource type="Resource" uid="uid://divw1i7qemv04" path="res://cards/work/obedience.tres" id="2_hkvdl"]
+[ext_resource type="Resource" uid="uid://cj5ttgq576378" path="res://cards/work/neutral.tres" id="4_lp703"]
+[ext_resource type="Resource" uid="uid://bejkgs80x3rmn" path="res://cards/work/disobedience.tres" id="5_qk6j3"]
+
+[sub_resource type="Resource" id="Resource_1mgha"]
+script = ExtResource("2_1mgha")
+stats = ExtResource("2_hkvdl")
+available = 5
+metadata/_custom_type_script = "uid://bpx0dut7j3d7x"
+
+[sub_resource type="Resource" id="Resource_lp703"]
+script = ExtResource("2_1mgha")
+stats = ExtResource("4_lp703")
+available = 5
+metadata/_custom_type_script = "uid://bpx0dut7j3d7x"
+
+[sub_resource type="Resource" id="Resource_qk6j3"]
+script = ExtResource("2_1mgha")
+stats = ExtResource("5_qk6j3")
+available = 5
+metadata/_custom_type_script = "uid://bpx0dut7j3d7x"
+
+[node name="CardOptions" type="HBoxContainer" unique_id=1410519787]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("1_hkvdl")
+work_cards = Array[ExtResource("2_1mgha")]([SubResource("Resource_1mgha"), SubResource("Resource_lp703"), SubResource("Resource_qk6j3")])
+
+[node name="Card" parent="." unique_id=1806750386 instance=ExtResource("1_uxvtg")]
+layout_mode = 2
+
+[node name="Card2" parent="." unique_id=1338469358 instance=ExtResource("1_uxvtg")]
+layout_mode = 2
+
+[node name="Card3" parent="." unique_id=1081887909 instance=ExtResource("1_uxvtg")]
+layout_mode = 2

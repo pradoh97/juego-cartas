@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bfywjnn4mwwee"]
+
+[ext_resource type="Script" uid="uid://dvflfo43vp6cw" path="res://cards/card.gd" id="1_ivai2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivai2"]
+bg_color = Color(0, 0, 0, 0.78431374)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 0.78431374)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k7q8"]
+bg_color = Color(0, 0, 0, 0.6666667)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 0.6666667)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwofj"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Card" type="CenterContainer" unique_id=1806750386]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ivai2")
+
+[node name="Button" type="Button" parent="." unique_id=560099225]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ivai2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4k7q8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nwofj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Button" unique_id=1400184569]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 295.0
+offset_bottom = 495.0
+
+[node name="CardType" type="Label" parent="Button/VBoxContainer" unique_id=1200538431]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Some card"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Button/VBoxContainer" unique_id=2081125970]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Obedience" type="Label" parent="Button/VBoxContainer/HBoxContainer" unique_id=1749572506]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="Money" type="Label" parent="Button/VBoxContainer/HBoxContainer" unique_id=2113504712]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="Morale" type="Label" parent="Button/VBoxContainer/HBoxContainer" unique_id=488108545]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="PromotionProgress" type="Label" parent="Button/VBoxContainer/HBoxContainer" unique_id=650964509]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="Expenses" type="Label" parent="Button/VBoxContainer/HBoxContainer" unique_id=1705764136]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
