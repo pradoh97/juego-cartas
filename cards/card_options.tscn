@@ -26,14 +26,19 @@ available = 5
 metadata/_custom_type_script = "uid://bpx0dut7j3d7x"
 
 [node name="CardOptions" type="HBoxContainer" unique_id=1410519787]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = 0.08767361
+anchor_top = 0.83100003
+anchor_right = 0.9123264
+anchor_bottom = 1.0910001
+offset_top = -538.48804
+offset_bottom = -58.96808
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 script = ExtResource("1_hkvdl")
 work_cards = Array[ExtResource("2_1mgha")]([SubResource("Resource_1mgha"), SubResource("Resource_lp703"), SubResource("Resource_qk6j3")])
+metadata/_edit_use_anchors_ = true
 
 [node name="Card" parent="." unique_id=1806750386 instance=ExtResource("1_uxvtg")]
 layout_mode = 2

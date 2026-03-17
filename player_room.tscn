@@ -3,6 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://c2iwp7ecp23vj" path="res://room.jpg" id="1_hw8qq"]
 [ext_resource type="Script" uid="uid://dr3jojobk4nb3" path="res://player_room.gd" id="1_plsfm"]
 [ext_resource type="PackedScene" uid="uid://bhunogn8hbghq" path="res://cards/card_options.tscn" id="2_1ojmq"]
+[ext_resource type="PackedScene" uid="uid://cj8lkr67agjq3" path="res://player/player_stats.tscn" id="4_1ojmq"]
+[ext_resource type="Resource" uid="uid://bw6lp6mop6amx" path="res://player/initial_stats/obedience.tres" id="5_sjpys"]
+[ext_resource type="Resource" uid="uid://c1grjrcfh3ls6" path="res://player/initial_stats/morale.tres" id="6_8qgar"]
+[ext_resource type="Resource" uid="uid://b4lk848taxpqq" path="res://player/initial_stats/promotion_progress.tres" id="7_d0s76"]
+[ext_resource type="Resource" uid="uid://bsvtnvac18bws" path="res://player/initial_stats/money.tres" id="8_3gq20"]
+[ext_resource type="Resource" uid="uid://cujg337mx1xjd" path="res://player/initial_stats/expenses.tres" id="9_1t0pb"]
 
 [sub_resource type="Gradient" id="Gradient_hw8qq"]
 offsets = PackedFloat32Array(0)
@@ -11,9 +17,10 @@ colors = PackedColorArray(0, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_8tnse"]
 gradient = SubResource("Gradient_hw8qq")
 
-[node name="PlayerRoom" type="Node2D" unique_id=381902971]
+[node name="PlayerRoom" type="Node2D" unique_id=381902971 node_paths=PackedStringArray("player_stats")]
 script = ExtResource("1_plsfm")
 card_options_scene = ExtResource("2_1ojmq")
+player_stats = NodePath("CanvasLayer2/PlayerStats")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1039303709]
 layer = -1
@@ -27,12 +34,31 @@ grow_vertical = 2
 texture = SubResource("GradientTexture1D_8tnse")
 
 [node name="Room" type="Sprite2D" parent="." unique_id=1690148002]
+position = Vector2(0, -464)
 texture = ExtResource("1_hw8qq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=39536923]
 zoom = Vector2(0.3, 0.3)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=195440851]
+
+[node name="PlayerStats" parent="CanvasLayer2" unique_id=45892594 node_paths=PackedStringArray("stats") instance=ExtResource("4_1ojmq")]
+anchors_preset = -1
+anchor_left = 0.052
+anchor_top = 0.035
+anchor_right = 0.9480001
+anchor_bottom = 0.9480001
+offset_left = 0.5404587
+offset_top = 0.3199997
+offset_right = -0.54052734
+offset_bottom = -0.30407715
+stats = {
+ExtResource("5_sjpys"): NodePath("BoundedStats/Obedience"),
+ExtResource("6_8qgar"): NodePath("BoundedStats/Morale"),
+ExtResource("7_d0s76"): NodePath("BoundedStats/PromotionProgress"),
+ExtResource("8_3gq20"): NodePath("UnboundedStats/Money"),
+ExtResource("9_1t0pb"): NodePath("UnboundedStats/Expenses")
+}
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer2" unique_id=1551022721]
 anchors_preset = 15

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Modifier" format=3 uid="uid://bsvtnvac18bws"]
+
+[ext_resource type="Script" uid="uid://oxdfipc21itw" path="res://cards/modifier.gd" id="1_n6gro"]
+
+[resource]
+script = ExtResource("1_n6gro")
+type = 1
+amount = 50
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"

@@ -2,7 +2,7 @@ extends Node2D
 class_name PlayerRoom
 
 @export var card_options_scene: PackedScene
-
+@export var player_stats: PlayerStats
 var turn: int = 0
 var turn_type: CardStats.CARD_TYPE
 var current_draft: CardOptions
@@ -32,6 +32,8 @@ func _on_start_game_pressed():
 	$CanvasLayer2/PanelContainer.queue_free()
 	new_turn()
 
-
 func _on_card_selected(card_stats: CardStats):
+	for modifier in card_stats.modifiers:
+		if player_stats:
+			player_stats.set_stat(modifier)
 	new_turn()

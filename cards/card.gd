@@ -6,7 +6,6 @@ class_name Card
 signal card_selected(stats: CardStats)
 
 func _ready():
-
 	match stats.type:
 		CardStats.CARD_TYPE.work:
 			%CardType.text = "Work"

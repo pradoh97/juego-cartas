@@ -1,6 +1,64 @@
 [gd_scene format=3 uid="uid://cj8lkr67agjq3"]
 
 [ext_resource type="Script" uid="uid://mdlydkg3lrg2" path="res://player/player_stats.gd" id="1_5xcwd"]
+[ext_resource type="Resource" uid="uid://bw6lp6mop6amx" path="res://player/initial_stats/obedience.tres" id="2_r78v2"]
+[ext_resource type="Resource" uid="uid://c1grjrcfh3ls6" path="res://player/initial_stats/morale.tres" id="3_2woqf"]
+[ext_resource type="PackedScene" uid="uid://d0rl7igatku25" path="res://player/stat.tscn" id="3_4b5ft"]
+[ext_resource type="Resource" uid="uid://b4lk848taxpqq" path="res://player/initial_stats/promotion_progress.tres" id="4_2woqf"]
+[ext_resource type="Resource" uid="uid://bsvtnvac18bws" path="res://player/initial_stats/money.tres" id="5_g8wab"]
+[ext_resource type="Resource" uid="uid://cujg337mx1xjd" path="res://player/initial_stats/expenses.tres" id="6_draim"]
 
-[node name="PlayerStats" type="Node" unique_id=45892594]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_draim"]
+
+[node name="PlayerStats" type="MarginContainer" unique_id=1254289255 node_paths=PackedStringArray("stats")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_5xcwd")
+stats = {
+ExtResource("2_r78v2"): NodePath("BoundedStats/Obedience"),
+ExtResource("3_2woqf"): NodePath("BoundedStats/Morale"),
+ExtResource("4_2woqf"): NodePath("BoundedStats/PromotionProgress"),
+ExtResource("5_g8wab"): NodePath("UnboundedStats/Money"),
+ExtResource("6_draim"): NodePath("UnboundedStats/Expenses")
+}
+
+[node name="BoundedStats" type="HBoxContainer" parent="." unique_id=1125837819]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 128
+
+[node name="Panel2" type="Panel" parent="BoundedStats" unique_id=618120340]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_draim")
+
+[node name="Obedience" parent="BoundedStats" unique_id=1953881730 instance=ExtResource("3_4b5ft")]
+layout_mode = 2
+
+[node name="Morale" parent="BoundedStats" unique_id=752905269 instance=ExtResource("3_4b5ft")]
+layout_mode = 2
+
+[node name="PromotionProgress" parent="BoundedStats" unique_id=1602395914 instance=ExtResource("3_4b5ft")]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="BoundedStats" unique_id=1158707926]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_draim")
+
+[node name="UnboundedStats" type="VBoxContainer" parent="." unique_id=1581005837]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+alignment = 2
+
+[node name="Money" parent="UnboundedStats" unique_id=966333202 instance=ExtResource("3_4b5ft")]
+layout_mode = 2
+
+[node name="Expenses" parent="UnboundedStats" unique_id=1557515806 instance=ExtResource("3_4b5ft")]
+layout_mode = 2
