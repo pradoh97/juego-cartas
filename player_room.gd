@@ -7,6 +7,7 @@ class_name PlayerRoom
 var day: int = 0
 var turn: int = 0
 var current_draft: UICardOptions
+var day_passed: bool = false
 
 func new_draft():
 	var draft: Array[Card] = []
@@ -49,6 +50,12 @@ func new_turn():
 		var lights_tween = create_tween()
 		lights_tween.tween_property($Room, "modulate", Color("#fff"), $TurnTransitionTimer.wait_time)
 	if day <= days.size() - 1:
+		if day_passed:
+			day_passed = false
+			var stats: Stats = Stats.new()
+			for stat in %PlayerStats.stats:
+				stats.stat.append(%PlayerStats.stats[stat])
+			%StatConditionSystem.check_conditions(stats)
 		$TurnTransitionTimer.start()
 
 func update_day_turn():
@@ -75,3 +82,4 @@ func _on_turn_transition_timer_timeout():
 	if turn == 4:
 		turn = 0
 		day += 1
+		day_passed = true

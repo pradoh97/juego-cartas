@@ -7,14 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://cj8lkr67agjq3" path="res://player/player_stats.tscn" id="4_1ojmq"]
 [ext_resource type="Resource" uid="uid://butuu5f83a38q" path="res://cards/days/1.tres" id="4_3gq20"]
 [ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="5_4fkm8"]
-[ext_resource type="Resource" uid="uid://d8bxfhgtcfv0" path="res://cards/modifiers/morale.tres" id="5_8qgar"]
 [ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://cards/stat.gd" id="6_d0s76"]
 [ext_resource type="Script" uid="uid://b6ee7xwv3uimj" path="res://cards/stats.gd" id="6_pq8mr"]
-[ext_resource type="Resource" uid="uid://cnxpq5hq5siut" path="res://cards/modifiers/obedience.tres" id="7_3gq20"]
-[ext_resource type="Resource" uid="uid://bijpjuyi6v2v2" path="res://cards/modifiers/promotion_progress.tres" id="8_1t0pb"]
 [ext_resource type="Script" uid="uid://oxdfipc21itw" path="res://cards/modifier.gd" id="8_4pcic"]
-[ext_resource type="Resource" uid="uid://lkjncu4uvm1p" path="res://cards/modifiers/money.tres" id="9_358ef"]
-[ext_resource type="Resource" uid="uid://grlmamxkjejd" path="res://cards/modifiers/expenses.tres" id="10_pq8mr"]
+[ext_resource type="PackedScene" uid="uid://c7q11ioxhalvj" path="res://player/stat_condition_system.tscn" id="9_d0s76"]
+[ext_resource type="Script" uid="uid://b6njg8jje7ia3" path="res://player/stat_condition.gd" id="10_3gq20"]
 
 [sub_resource type="Resource" id="Resource_1l8t1"]
 script = ExtResource("8_4pcic")
@@ -625,6 +622,12 @@ work_cards = Array[ExtResource("5_4fkm8")]([SubResource("Resource_56mk0"), SubRe
 leisure_cards = Array[ExtResource("5_4fkm8")]([SubResource("Resource_lxqrq"), SubResource("Resource_p2x2x"), SubResource("Resource_a5wro"), SubResource("Resource_n8d8q"), SubResource("Resource_4cpkk"), SubResource("Resource_vakp2")])
 metadata/_custom_type_script = "uid://b4jlc55gpfbtg"
 
+[sub_resource type="Resource" id="Resource_1t0pb"]
+script = ExtResource("10_3gq20")
+threshold = 30
+operator = "<"
+metadata/_custom_type_script = "uid://b6njg8jje7ia3"
+
 [sub_resource type="Gradient" id="Gradient_hw8qq"]
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(0, 0, 0, 1)
@@ -632,41 +635,15 @@ colors = PackedColorArray(0, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_8tnse"]
 gradient = SubResource("Gradient_hw8qq")
 
-[sub_resource type="Resource" id="Resource_k3wqe"]
-script = ExtResource("6_d0s76")
-modifier = ExtResource("5_8qgar")
-amount = 20
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_3ieyt"]
-script = ExtResource("6_d0s76")
-modifier = ExtResource("7_3gq20")
-amount = 40
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_ghlk2"]
-script = ExtResource("6_d0s76")
-modifier = ExtResource("8_1t0pb")
-amount = 10
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_sj2r8"]
-script = ExtResource("6_d0s76")
-modifier = ExtResource("9_358ef")
-amount = 50
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_m4fo4"]
-script = ExtResource("6_d0s76")
-modifier = ExtResource("10_pq8mr")
-amount = 20
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
 [node name="PlayerRoom" type="Node2D" unique_id=381902971 node_paths=PackedStringArray("player_stats")]
 script = ExtResource("1_plsfm")
 card_options_scene = ExtResource("2_1ojmq")
 player_stats = NodePath("CanvasLayer2/PlayerStats")
 days = Array[ExtResource("3_d0s76")]([ExtResource("4_3gq20"), SubResource("Resource_iltf1")])
+
+[node name="StatConditionSystem" parent="." unique_id=566690019 instance=ExtResource("9_d0s76")]
+unique_name_in_owner = true
+conditions = Array[ExtResource("10_3gq20")]([SubResource("Resource_1t0pb")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1039303709]
 layer = -1
@@ -688,7 +665,8 @@ zoom = Vector2(0.3, 0.3)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=195440851]
 
-[node name="PlayerStats" parent="CanvasLayer2" unique_id=45892594 node_paths=PackedStringArray("stats") instance=ExtResource("4_1ojmq")]
+[node name="PlayerStats" parent="CanvasLayer2" unique_id=45892594 node_paths=PackedStringArray("stats_ui") instance=ExtResource("4_1ojmq")]
+unique_name_in_owner = true
 anchors_preset = -1
 anchor_left = 0.052
 anchor_top = 0.035
@@ -698,13 +676,7 @@ offset_left = 0.5404587
 offset_top = 0.3199997
 offset_right = -0.54052734
 offset_bottom = -0.30407715
-stats = {
-SubResource("Resource_k3wqe"): NodePath("BoundedStats/Morale"),
-SubResource("Resource_3ieyt"): NodePath("BoundedStats/Obedience"),
-SubResource("Resource_ghlk2"): NodePath("BoundedStats/PromotionProgress"),
-SubResource("Resource_sj2r8"): NodePath("HBoxContainer/UnboundedStats/Money"),
-SubResource("Resource_m4fo4"): NodePath("HBoxContainer/UnboundedStats/Expenses")
-}
+stats_ui = {}
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer2" unique_id=1551022721]
 anchors_preset = 15
