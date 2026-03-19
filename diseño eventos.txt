@@ -1,0 +1,5 @@
+Cómo hacer los eventos:
+ - Como hice en Kaena con los pasos del NPC. Creo steps y luego con polimorfismo creo clases que sean los tipos de pasos con su lógica  para ejecutar. En este caso sería events y los eventos específicos extenderian.
+ - Existe un contexto (otra clase) que guarda referencias a sistemas, como player room, player stats, etc. Este objeto lo creo en el player room y se lo paso al statconditionsystem, así se lo pasa al evento a disparar.
+ - El evento recibe un contexto (otra clase) va a modificar atributos o llama métodos del contexto.
+ - El sistema del contexto que se ve afectado por el evento, dispara una señal. Cada sistema registra sus señales con los sistemas que pueden llegar a responder. Los otros sistemas responden
