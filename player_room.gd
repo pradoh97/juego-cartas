@@ -13,8 +13,10 @@ func new_draft():
 	var card_options: Array[Card] = []
 	var available_cards = days[day].work_cards
 
-	if turn >= 3:
+	if turn >= 2:
 		available_cards = days[day].leisure_cards
+
+	available_cards = available_cards.filter(func(card: Card): return not card.used)
 
 	var cards_to_draft = min(days[day].cards_per_turn, available_cards.size())
 	for card_number in cards_to_draft:
@@ -35,13 +37,14 @@ func clear_draft():
 
 func new_turn():
 	clear_draft()
-	turn += 1
-	#Move to next day.
-	if turn > 4:
-		turn = 0
-		day += 1
 	if day <= days.size() - 1:
 		new_draft()
+
+	turn += 1
+	#Move to next day.
+	if turn == 4:
+		turn = 0
+		day += 1
 
 	if current_draft:
 		current_draft.connect_card_signals_to(_on_card_selected)

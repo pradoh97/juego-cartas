@@ -10,4 +10,5 @@ func build(new_card: Card):
 	$Text.text = card.text
 
 func _on_button_pressed():
+	card.mark_as_used()
 	card_selected.emit(card)
