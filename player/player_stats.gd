@@ -17,3 +17,4 @@ func set_stats(selected_card: Card):
 		for player_stat in stats:
 			if player_stat.modifier.type == modifier_type:
 				player_stat.amount += stat.amount
+				stats[player_stat].set_value(player_stat.amount)
