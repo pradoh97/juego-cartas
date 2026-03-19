@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cj8lkr67agjq3"]
 
 [ext_resource type="Script" uid="uid://mdlydkg3lrg2" path="res://player/player_stats.gd" id="1_5xcwd"]
-[ext_resource type="PackedScene" uid="uid://d0rl7igatku25" path="res://player/stat_ui.tscn" id="3_4b5ft"]
+[ext_resource type="PackedScene" uid="uid://d0rl7igatku25" path="res://UI/stat_ui.tscn" id="3_4b5ft"]
 [ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://cards/stat.gd" id="3_r78v2"]
 [ext_resource type="Resource" uid="uid://cnxpq5hq5siut" path="res://cards/modifiers/obedience.tres" id="4_draim"]
 [ext_resource type="Resource" uid="uid://d8bxfhgtcfv0" path="res://cards/modifiers/morale.tres" id="5_g48p5"]
@@ -9,31 +9,31 @@
 [ext_resource type="Resource" uid="uid://lkjncu4uvm1p" path="res://cards/modifiers/money.tres" id="7_os73m"]
 [ext_resource type="Resource" uid="uid://grlmamxkjejd" path="res://cards/modifiers/expenses.tres" id="8_on5c7"]
 
-[sub_resource type="Resource" id="Resource_2woqf"]
+[sub_resource type="Resource" id="Resource_k3wqe"]
 script = ExtResource("3_r78v2")
 modifier = ExtResource("5_g48p5")
 amount = 20
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_g8wab"]
+[sub_resource type="Resource" id="Resource_3ieyt"]
 script = ExtResource("3_r78v2")
 modifier = ExtResource("4_draim")
 amount = 40
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_g48p5"]
+[sub_resource type="Resource" id="Resource_ghlk2"]
 script = ExtResource("3_r78v2")
 modifier = ExtResource("6_os73m")
 amount = 10
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_os73m"]
+[sub_resource type="Resource" id="Resource_sj2r8"]
 script = ExtResource("3_r78v2")
 modifier = ExtResource("7_os73m")
 amount = 50
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_on5c7"]
+[sub_resource type="Resource" id="Resource_m4fo4"]
 script = ExtResource("3_r78v2")
 modifier = ExtResource("8_on5c7")
 amount = 20
@@ -51,11 +51,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_5xcwd")
 stats = {
-SubResource("Resource_2woqf"): NodePath("BoundedStats/Morale"),
-SubResource("Resource_g8wab"): NodePath("BoundedStats/Obedience"),
-SubResource("Resource_g48p5"): NodePath("BoundedStats/PromotionProgress"),
-SubResource("Resource_os73m"): NodePath("UnboundedStats/Money"),
-SubResource("Resource_on5c7"): NodePath("UnboundedStats/Expenses")
+SubResource("Resource_k3wqe"): NodePath("BoundedStats/Morale"),
+SubResource("Resource_3ieyt"): NodePath("BoundedStats/Obedience"),
+SubResource("Resource_ghlk2"): NodePath("BoundedStats/PromotionProgress"),
+SubResource("Resource_sj2r8"): NodePath("UnboundedStats/Money"),
+SubResource("Resource_m4fo4"): NodePath("UnboundedStats/Expenses")
 }
 
 [node name="BoundedStats" type="HBoxContainer" parent="." unique_id=1125837819]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bhunogn8hbghq"]
 
-[ext_resource type="Script" uid="uid://ksssuwe6mmhk" path="res://cards/card_options.gd" id="1_hkvdl"]
-[ext_resource type="PackedScene" uid="uid://bfywjnn4mwwee" path="res://cards/UI_card.tscn" id="1_uxvtg"]
+[ext_resource type="Script" uid="uid://ksssuwe6mmhk" path="res://UI/ui_card_options.gd" id="1_hkvdl"]
+[ext_resource type="PackedScene" uid="uid://bfywjnn4mwwee" path="res://UI/ui_card.tscn" id="1_uxvtg"]
 
 [node name="CardOptions" type="HBoxContainer" unique_id=1410519787]
 anchors_preset = -1

@@ -7,6 +7,7 @@ signal card_selected(card: Card)
 
 func build(new_card: Card):
 	card = new_card
+	card.mark_as_shown()
 	$Text.text = card.text
 
 func _on_button_pressed():

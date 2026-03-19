@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfywjnn4mwwee"]
 
-[ext_resource type="Script" uid="uid://dvflfo43vp6cw" path="res://cards/UI_card.gd" id="1_uw2ql"]
+[ext_resource type="Script" uid="uid://dvflfo43vp6cw" path="res://UI/ui_card.gd" id="1_dr4nk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivai2"]
 bg_color = Color(0, 0, 0, 0.78431374)
@@ -48,7 +48,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_uw2ql")
+script = ExtResource("1_dr4nk")
 
 [node name="Text" type="Button" parent="." unique_id=560099225]
 custom_minimum_size = Vector2(300, 500)

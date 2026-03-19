@@ -6,29 +6,32 @@ class_name PlayerRoom
 @export var days: Array[Day]
 var day: int = 0
 var turn: int = 0
-var current_draft: CardOptions
+var current_draft: UICardOptions
 
 func new_draft():
-	var card_options_instance: CardOptions = card_options_scene.instantiate()
-	var card_options: Array[Card] = []
-	var available_cards = days[day].work_cards
+	var draft: Array[Card] = []
+	var ui_card_options_instance: UICardOptions = card_options_scene.instantiate()
+	var card_options: CardOptions = CardOptions.new()
+	var available_cards: Array[Card] = []
+	card_options.cards = days[day].work_cards
 
 	if turn >= 2:
-		available_cards = days[day].leisure_cards
+		card_options.cards = days[day].leisure_cards
 
-	available_cards = available_cards.filter(func(card: Card): return not card.used)
+	available_cards = card_options.get_available_cards()
 
 	var cards_to_draft = min(days[day].cards_per_turn, available_cards.size())
+
 	for card_number in cards_to_draft:
-		var amount_of_turn_cards = available_cards.size()
-		var random_card_index = randi_range(0, amount_of_turn_cards - 1)
+		var amount_of_turn_cards = available_cards.size() - 1
+		var random_card_index = randi_range(0, amount_of_turn_cards)
 
 		var selected_card: Card = available_cards.pop_at(random_card_index)
-		card_options.append(selected_card)
+		draft.append(selected_card)
 
-	card_options_instance.set_cards(card_options)
-	$CanvasLayer2.add_child(card_options_instance)
-	current_draft = card_options_instance
+	ui_card_options_instance.set_cards(draft)
+	$CanvasLayer2.add_child(ui_card_options_instance)
+	current_draft = ui_card_options_instance
 
 func clear_draft():
 	if current_draft:
@@ -37,17 +40,14 @@ func clear_draft():
 
 func new_turn():
 	clear_draft()
+	if turn == 2:
+		var lights_tween = create_tween()
+		lights_tween.tween_property($Room, "modulate", Color("#595959"), $TurnTransitionTimer.wait_time)
+	if turn == 0:
+		var lights_tween = create_tween()
+		lights_tween.tween_property($Room, "modulate", Color("#fff"), $TurnTransitionTimer.wait_time)
 	if day <= days.size() - 1:
-		new_draft()
-
-	turn += 1
-	#Move to next day.
-	if turn == 4:
-		turn = 0
-		day += 1
-
-	if current_draft:
-		current_draft.connect_card_signals_to(_on_card_selected)
+		$TurnTransitionTimer.start()
 
 func _on_start_game_pressed():
 	$CanvasLayer2/StartGame.queue_free()
@@ -57,3 +57,14 @@ func _on_start_game_pressed():
 func _on_card_selected(card):
 	player_stats.set_stats(card)
 	new_turn()
+
+
+func _on_turn_transition_timer_timeout():
+	new_draft()
+	if current_draft:
+		current_draft.connect_card_signals_to(_on_card_selected)
+		turn += 1
+	#Move to next day.
+	if turn == 4:
+		turn = 0
+		day += 1

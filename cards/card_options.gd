@@ -1,15 +1,15 @@
-class_name CardOptions extends HBoxContainer
+class_name CardOptions extends Resource
 
-var cards: Array[Card]
+var cards: Array[Card] = []
 
-func _ready():
-	for card_index in cards.size():
-		var ui_card: UICard = get_child(card_index)
-		ui_card.build(cards[card_index])
+func _init(new_cards: Array[Card] = []):
+	cards = new_cards
 
-func set_cards(new_cards: Array[Card]):
-	cards = new_cards.duplicate()
+func get_unused_cards(cards_to_filter: Array[Card] = cards) -> Array[Card]:
+	return cards_to_filter.filter(func(card: Card): return not card.used)
 
-func connect_card_signals_to(method: Callable):
-	for card in get_children():
-		(card as UICard).card_selected.connect(method)
+func get_undisplayed_cards(cards_to_filter: Array[Card] = cards) -> Array[Card]:
+	return cards_to_filter.filter(func(card: Card): return not (card.hide_if_shown and card.shown))
+
+func get_available_cards() -> Array[Card]:
+	return get_undisplayed_cards(get_unused_cards(cards))
