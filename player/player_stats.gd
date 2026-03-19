@@ -4,6 +4,7 @@ class_name PlayerStats
 @export var stats: Dictionary[Stat, StatUI]
 
 func _ready():
+	visible = false
 	for stat in stats:
 		var ui_node = stats[stat]
 		var transition: bool = false
@@ -30,3 +31,10 @@ func set_stats(selected_card: Card):
 
 				var ui_node: StatUI = stats[player_stat]
 				ui_node.set_value(player_stat.amount)
+
+func update_day_turn(day: int, turn: int):
+	%Day.set_value(day)
+	%Turn.set_value(turn)
+
+func display_stats():
+	visible = true

@@ -40,6 +40,8 @@ func clear_draft():
 
 func new_turn():
 	clear_draft()
+	update_day_turn()
+
 	if turn == 2:
 		var lights_tween = create_tween()
 		lights_tween.tween_property($Room, "modulate", Color("#595959"), $TurnTransitionTimer.wait_time)
@@ -49,15 +51,20 @@ func new_turn():
 	if day <= days.size() - 1:
 		$TurnTransitionTimer.start()
 
+func update_day_turn():
+	var turn_with_offset = turn + 1
+	var day_with_offset = day + 1
+	player_stats.update_day_turn(day_with_offset, turn_with_offset)
+
 func _on_start_game_pressed():
 	$CanvasLayer2/StartGame.queue_free()
 	$CanvasLayer2/PanelContainer.queue_free()
+	$CanvasLayer2/PlayerStats.display_stats()
 	new_turn()
 
 func _on_card_selected(card):
 	player_stats.set_stats(card)
 	new_turn()
-
 
 func _on_turn_transition_timer_timeout():
 	new_draft()
