@@ -16,13 +16,5 @@ grow_vertical = 2
 theme_override_constants/separation = 64
 alignment = 1
 script = ExtResource("1_hkvdl")
+card_scene = ExtResource("1_uxvtg")
 metadata/_edit_use_anchors_ = true
-
-[node name="Card" parent="." unique_id=1806750386 instance=ExtResource("1_uxvtg")]
-layout_mode = 2
-
-[node name="Card2" parent="." unique_id=1338469358 instance=ExtResource("1_uxvtg")]
-layout_mode = 2
-
-[node name="Card3" parent="." unique_id=1081887909 instance=ExtResource("1_uxvtg")]
-layout_mode = 2
