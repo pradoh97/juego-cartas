@@ -1,5 +1,4 @@
-extends Resource
-class_name Modifier
+class_name Modifier extends Resource
 
 enum MODIFIER_TYPE{
 	obedience,

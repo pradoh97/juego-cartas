@@ -5,7 +5,7 @@ var modifier_is_bounded = false
 
 func initialize(modifier: Modifier):
 	modifier_is_bounded = modifier.is_bounded
-	if not modifier.is_bounded:
+	if not modifier_is_bounded:
 		$ProgressBar.queue_free()
 		$Value.visible = true
 	else:
