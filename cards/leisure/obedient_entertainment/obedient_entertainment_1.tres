@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://oj58nrh0r4b6"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_ic0bi"]
+[ext_resource type="Resource" uid="uid://u5ngvuncpja" path="res://cards/leisure/obedient_entertainment/obedient_entertainment_stats.tres" id="2_w3570"]
+
+[resource]
+script = ExtResource("1_ic0bi")
+text = "Sintonizar \"¿Quién se cagó?\", el reality en el que 6 famosos intentan descubrir quien de ellos se tiró un pedo."
+stats = ExtResource("2_w3570")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://dihx5nwjhypwx"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_f05km"]
+[ext_resource type="Resource" uid="uid://dlmf8paamxyl5" path="res://cards/leisure/saciety/saciety_stats.tres" id="2_olmiu"]
+
+[resource]
+script = ExtResource("1_f05km")
+text = "Usar cupón de descuento para combo pequeño en Mc Daddys por una hamburguesa Mc Daddys, unas papas Mc Daddys y una bebida Mc Daddys a elección."
+stats = ExtResource("2_olmiu")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"

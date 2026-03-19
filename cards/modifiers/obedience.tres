@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Modifier" format=3 uid="uid://cnxpq5hq5siut"]
+
+[ext_resource type="Script" uid="uid://oxdfipc21itw" path="res://cards/modifier.gd" id="1_xvw36"]
+
+[resource]
+script = ExtResource("1_xvw36")
+icon = "🤝"
+metadata/_custom_type_script = "uid://oxdfipc21itw"

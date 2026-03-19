@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://6y1covlxbd0d"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_w2oiw"]
+[ext_resource type="Resource" uid="uid://xj2bmrn7dwer" path="res://cards/leisure/disobedient_entertainment/disobedient_entertainment_stats.tres" id="2_ghrks"]
+
+[resource]
+script = ExtResource("1_w2oiw")
+text = "Ir al teatro a ver \"Revolución-a-dos.\" Una historia de una pareja de idealistas abriendose paso en un mundo golpeado y demente."
+stats = ExtResource("2_ghrks")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"

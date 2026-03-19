@@ -10,6 +10,5 @@ enum MODIFIER_TYPE{
 }
 
 @export var type: MODIFIER_TYPE
-@export var amount: int = 0
 @export var icon: String = ""
 @export var is_bounded: bool = true

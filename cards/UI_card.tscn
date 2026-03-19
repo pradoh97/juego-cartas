@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bfywjnn4mwwee"]
+
+[ext_resource type="Script" uid="uid://dvflfo43vp6cw" path="res://cards/UI_card.gd" id="1_uw2ql"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivai2"]
+bg_color = Color(0, 0, 0, 0.78431374)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 0.78431374)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k7q8"]
+bg_color = Color(0, 0, 0, 0.6666667)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 0.6666667)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwofj"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Card" type="CenterContainer" unique_id=1806750386]
+anchors_preset = -1
+anchor_right = 0.26000002
+anchor_bottom = 0.772
+offset_right = 0.47998047
+offset_bottom = -0.25601196
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_uw2ql")
+
+[node name="Text" type="Button" parent="." unique_id=560099225]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ivai2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4k7q8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nwofj")
+autowrap_mode = 2
+
+[connection signal="pressed" from="Text" to="." method="_on_button_pressed"]

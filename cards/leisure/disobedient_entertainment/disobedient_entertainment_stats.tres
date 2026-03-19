@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Stats" format=3 uid="uid://xj2bmrn7dwer"]
+
+[ext_resource type="Script" uid="uid://b6ee7xwv3uimj" path="res://cards/stats.gd" id="1_80mw8"]
+[ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://cards/stat.gd" id="2_133jc"]
+[ext_resource type="Resource" uid="uid://cnxpq5hq5siut" path="res://cards/modifiers/obedience.tres" id="3_33upu"]
+[ext_resource type="Resource" uid="uid://lkjncu4uvm1p" path="res://cards/modifiers/money.tres" id="4_nwjou"]
+[ext_resource type="Resource" uid="uid://d8bxfhgtcfv0" path="res://cards/modifiers/morale.tres" id="5_mnmsy"]
+
+[sub_resource type="Resource" id="Resource_oq1kh"]
+script = ExtResource("2_133jc")
+modifier = ExtResource("3_33upu")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_d5l1x"]
+script = ExtResource("2_133jc")
+modifier = ExtResource("4_nwjou")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_5r2m3"]
+script = ExtResource("2_133jc")
+modifier = ExtResource("5_mnmsy")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[resource]
+script = ExtResource("1_80mw8")
+stat = Array[ExtResource("2_133jc")]([SubResource("Resource_oq1kh"), SubResource("Resource_d5l1x"), SubResource("Resource_5r2m3")])
+metadata/_custom_type_script = "uid://b6ee7xwv3uimj"

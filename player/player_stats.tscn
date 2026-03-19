@@ -1,12 +1,43 @@
 [gd_scene format=3 uid="uid://cj8lkr67agjq3"]
 
 [ext_resource type="Script" uid="uid://mdlydkg3lrg2" path="res://player/player_stats.gd" id="1_5xcwd"]
-[ext_resource type="Resource" uid="uid://bw6lp6mop6amx" path="res://player/initial_stats/obedience.tres" id="2_r78v2"]
-[ext_resource type="Resource" uid="uid://c1grjrcfh3ls6" path="res://player/initial_stats/morale.tres" id="3_2woqf"]
-[ext_resource type="PackedScene" uid="uid://d0rl7igatku25" path="res://player/stat.tscn" id="3_4b5ft"]
-[ext_resource type="Resource" uid="uid://b4lk848taxpqq" path="res://player/initial_stats/promotion_progress.tres" id="4_2woqf"]
-[ext_resource type="Resource" uid="uid://bsvtnvac18bws" path="res://player/initial_stats/money.tres" id="5_g8wab"]
-[ext_resource type="Resource" uid="uid://cujg337mx1xjd" path="res://player/initial_stats/expenses.tres" id="6_draim"]
+[ext_resource type="PackedScene" uid="uid://d0rl7igatku25" path="res://player/stat_ui.tscn" id="3_4b5ft"]
+[ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://cards/stat.gd" id="3_r78v2"]
+[ext_resource type="Resource" uid="uid://cnxpq5hq5siut" path="res://cards/modifiers/obedience.tres" id="4_draim"]
+[ext_resource type="Resource" uid="uid://d8bxfhgtcfv0" path="res://cards/modifiers/morale.tres" id="5_g48p5"]
+[ext_resource type="Resource" uid="uid://bijpjuyi6v2v2" path="res://cards/modifiers/promotion_progress.tres" id="6_os73m"]
+[ext_resource type="Resource" uid="uid://lkjncu4uvm1p" path="res://cards/modifiers/money.tres" id="7_os73m"]
+[ext_resource type="Resource" uid="uid://grlmamxkjejd" path="res://cards/modifiers/expenses.tres" id="8_on5c7"]
+
+[sub_resource type="Resource" id="Resource_2woqf"]
+script = ExtResource("3_r78v2")
+modifier = ExtResource("5_g48p5")
+amount = 20
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_g8wab"]
+script = ExtResource("3_r78v2")
+modifier = ExtResource("4_draim")
+amount = 40
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_g48p5"]
+script = ExtResource("3_r78v2")
+modifier = ExtResource("6_os73m")
+amount = 10
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_os73m"]
+script = ExtResource("3_r78v2")
+modifier = ExtResource("7_os73m")
+amount = 50
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_on5c7"]
+script = ExtResource("3_r78v2")
+modifier = ExtResource("8_on5c7")
+amount = 20
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_draim"]
 
@@ -20,11 +51,11 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_5xcwd")
 stats = {
-ExtResource("2_r78v2"): NodePath("BoundedStats/Obedience"),
-ExtResource("3_2woqf"): NodePath("BoundedStats/Morale"),
-ExtResource("4_2woqf"): NodePath("BoundedStats/PromotionProgress"),
-ExtResource("5_g8wab"): NodePath("UnboundedStats/Money"),
-ExtResource("6_draim"): NodePath("UnboundedStats/Expenses")
+SubResource("Resource_2woqf"): NodePath("BoundedStats/Morale"),
+SubResource("Resource_g8wab"): NodePath("BoundedStats/Obedience"),
+SubResource("Resource_g48p5"): NodePath("BoundedStats/PromotionProgress"),
+SubResource("Resource_os73m"): NodePath("UnboundedStats/Money"),
+SubResource("Resource_on5c7"): NodePath("UnboundedStats/Expenses")
 }
 
 [node name="BoundedStats" type="HBoxContainer" parent="." unique_id=1125837819]

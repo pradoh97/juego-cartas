@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://kg15qyswq806"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_3s8ct"]
+[ext_resource type="Resource" uid="uid://s0m0xwtt1lrs" path="res://cards/work/obedience/obedience_stats.tres" id="2_3uglv"]
+
+[resource]
+script = ExtResource("1_3s8ct")
+text = "Nueva medida de seguridad: será penado de 6 a 10 años de carcel a quien use la palabra \"Cerdo\" para referirse a oficiales del orden y la paz."
+stats = ExtResource("2_3uglv")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"

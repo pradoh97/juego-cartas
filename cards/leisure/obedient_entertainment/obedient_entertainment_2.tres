@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://bues8j8jsjwe7"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_uukot"]
+[ext_resource type="Resource" uid="uid://u5ngvuncpja" path="res://cards/leisure/obedient_entertainment/obedient_entertainment_stats.tres" id="2_tl2gu"]
+
+[resource]
+script = ExtResource("1_uukot")
+text = "Ir al teatro a ver \"Entre Escotes y Faldas.\" Una historia de tetas y culos del ex secretario municipal."
+stats = ExtResource("2_tl2gu")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"

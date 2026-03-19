@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://3gb4wo50xo63"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_ey5s1"]
+[ext_resource type="Resource" uid="uid://qlgfmaqkqmsy" path="res://cards/leisure/promotion_progress/promotion_progress_stats.tres" id="2_aum8f"]
+
+[resource]
+script = ExtResource("1_ey5s1")
+text = "Organizar los eventos de la agenda de tu jefe y ordenar al restaurante sus almuerzos para la semana."
+stats = ExtResource("2_aum8f")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
