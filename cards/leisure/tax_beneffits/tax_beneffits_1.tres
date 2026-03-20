@@ -2,16 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_0475u"]
 [ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="1_j3bx4"]
-[ext_resource type="Resource" uid="uid://dlmf8paamxyl5" path="res://cards/leisure/saciety/saciety_stats.tres" id="2_nojmr"]
+[ext_resource type="Resource" uid="uid://uspbkvxsjnaw" path="res://cards/leisure/tax_beneffits/tax_beneffits_stats.tres" id="2_j3bx4"]
 
 [sub_resource type="Resource" id="Resource_aoljw"]
 script = ExtResource("1_j3bx4")
-stats_affected = ExtResource("2_nojmr")
+stats_affected = ExtResource("2_j3bx4")
 metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_0475u")
 text = "Calentar las sobras del guiso de ayer."
-stats = ExtResource("2_nojmr")
 card_result = SubResource("Resource_aoljw")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

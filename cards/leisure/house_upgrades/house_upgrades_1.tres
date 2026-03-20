@@ -12,6 +12,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 [resource]
 script = ExtResource("1_hlain")
 text = "Comprar la aspiradora Robo-y-clean (Happy People Inc.) y despedir a la empleada doméstica."
-stats = ExtResource("2_gk07l")
 card_result = SubResource("Resource_37bvg")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

@@ -3,7 +3,6 @@ class_name Card
 
 @export var text: String
 @export var card_result: CardResult
-@export var stats_affected: StatsCollection
 @export var hide_if_shown: bool = true
 
 var shown: bool = false

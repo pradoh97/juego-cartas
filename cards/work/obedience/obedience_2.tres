@@ -12,6 +12,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 [resource]
 script = ExtResource("1_3s8ct")
 text = "Nueva medida de seguridad: será penado de 6 a 10 años de carcel a quien use la palabra \"Cerdo\" para referirse a oficiales del orden y la paz."
-stats = ExtResource("2_3uglv")
 card_result = SubResource("Resource_t7031")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

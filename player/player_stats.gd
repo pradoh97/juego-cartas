@@ -42,8 +42,8 @@ func update_day_turn(day: int, turn: int):
 func display_stats():
 	visible = true
 
-func get_current_stats() -> Array[Stat]:
-	var current_stats: Array[Stat]
+func get_current_stats() -> StatsCollection:
+	var current_stats: StatsCollection = StatsCollection.new()
 	for stat in stats:
-		current_stats.append(stats[stat])
+		current_stats.stats.append(stats[stat])
 	return current_stats

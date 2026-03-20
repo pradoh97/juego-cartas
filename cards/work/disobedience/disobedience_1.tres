@@ -12,6 +12,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 [resource]
 script = ExtResource("1_qogbc")
 text = "Corrupción en la cámara de comercio, arriban al país 13 computadoras usadas de un intercambio con Zarambique."
-stats = ExtResource("2_s31cc")
 card_result = SubResource("Resource_cc4jn")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

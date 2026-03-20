@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="Stats" format=3 uid="uid://cvpp5ksws36o3"]
+[gd_resource type="Resource" script_class="StatsCollection" format=3 uid="uid://cvpp5ksws36o3"]
 
-[ext_resource type="Script" uid="uid://b6ee7xwv3uimj" path="res://stats/stats.gd" id="1_owtlv"]
+[ext_resource type="Script" uid="uid://rt35dnxylvsn" path="res://stats/stats_collection.gd" id="1_owtlv"]
 [ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://stats/stat.gd" id="2_vqeax"]
 [ext_resource type="Resource" uid="uid://cnxpq5hq5siut" path="res://cards/modifiers/obedience.tres" id="3_7miek"]
 [ext_resource type="Resource" uid="uid://lkjncu4uvm1p" path="res://cards/modifiers/money.tres" id="4_3kmjt"]
@@ -15,8 +15,8 @@ metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [sub_resource type="Resource" id="Resource_7miek"]
 script = ExtResource("2_vqeax")
-modifier = ExtResource("4_3kmjt")
-amount = 1
+modifier = ExtResource("6_iwomb")
+amount = -1
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [sub_resource type="Resource" id="Resource_3kmjt"]
@@ -27,11 +27,10 @@ metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [sub_resource type="Resource" id="Resource_3oxel"]
 script = ExtResource("2_vqeax")
-modifier = ExtResource("6_iwomb")
-amount = -1
+modifier = ExtResource("4_3kmjt")
+amount = 1
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [resource]
 script = ExtResource("1_owtlv")
-stat = Array[ExtResource("2_vqeax")]([SubResource("Resource_vqeax"), SubResource("Resource_7miek"), SubResource("Resource_3kmjt"), SubResource("Resource_3oxel")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
+stats = Array[ExtResource("2_vqeax")]([SubResource("Resource_vqeax"), SubResource("Resource_7miek"), SubResource("Resource_3kmjt"), SubResource("Resource_3oxel")])

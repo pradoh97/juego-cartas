@@ -12,6 +12,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 [resource]
 script = ExtResource("1_ey5s1")
 text = "Organizar los eventos de la agenda de tu jefe y ordenar al restaurante sus almuerzos para la semana."
-stats = ExtResource("2_aum8f")
 card_result = SubResource("Resource_j7mye")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

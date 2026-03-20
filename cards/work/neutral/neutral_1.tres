@@ -6,11 +6,11 @@
 
 [sub_resource type="Resource" id="Resource_dnuvc"]
 script = ExtResource("1_223sl")
+stats_affected = ExtResource("2_jacb0")
 metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_chvjt")
 text = "El despampanante vestido de la primera dama en el nuevo estreno de la película \"Cumbres Carrascosas\" y quién estuvo detrás de su diseño."
-stats = ExtResource("2_jacb0")
 card_result = SubResource("Resource_dnuvc")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

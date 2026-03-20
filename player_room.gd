@@ -60,7 +60,7 @@ func new_turn():
 	if day <= days.size() - 1:
 		if day_passed:
 			day_passed = false
-			var stats: Array[Stat] = %PlayerStats.get_current_stats()
+			var stats: StatsCollection = %PlayerStats.get_current_stats()
 			%StatConditionSystem.check_conditions(stats)
 		$TurnTransitionTimer.start()
 

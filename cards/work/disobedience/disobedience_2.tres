@@ -12,6 +12,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 [resource]
 script = ExtResource("1_10jf3")
 text = "Manifestantes logran repeler a las fuerzas represeivas al grito de \"¡fuera cerdos!\" en su reclamo por el pago de salarios atrasados, se convoca nueva manifestación para el miércoles próximo."
-stats = ExtResource("2_l4hpa")
 card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

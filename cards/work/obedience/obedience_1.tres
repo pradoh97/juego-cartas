@@ -12,6 +12,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 [resource]
 script = ExtResource("1_wxynq")
 text = "Presidencia anuncia un nuevo plan de comercio con la república de Zarambique, 400 toneladas de carne vacuna a cambio de 13 computadoras Zarambiquenses."
-stats = ExtResource("2_dupux")
 card_result = SubResource("Resource_aa5q5")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

@@ -12,6 +12,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 [resource]
 script = ExtResource("1_opk4g")
 text = "Hacer la fila y conseguir las entradas del recital de Spirité Indomavle en primera fila para la esposa del Jefe de Editores."
-stats = ExtResource("2_27035")
 card_result = SubResource("Resource_w5pvj")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

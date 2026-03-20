@@ -1,37 +1,36 @@
-[gd_resource type="Resource" script_class="Stats" format=3 uid="uid://dwjkwpta1fxuk"]
+[gd_resource type="Resource" script_class="StatsCollection" format=3 uid="uid://dwjkwpta1fxuk"]
 
-[ext_resource type="Script" uid="uid://b6ee7xwv3uimj" path="res://stats/stats.gd" id="1_lvoer"]
+[ext_resource type="Script" uid="uid://rt35dnxylvsn" path="res://stats/stats_collection.gd" id="1_2s8qq"]
 [ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://stats/stat.gd" id="2_s76lv"]
 [ext_resource type="Resource" uid="uid://cnxpq5hq5siut" path="res://cards/modifiers/obedience.tres" id="3_0jlt4"]
 [ext_resource type="Resource" uid="uid://lkjncu4uvm1p" path="res://cards/modifiers/money.tres" id="4_8bvpg"]
 [ext_resource type="Resource" uid="uid://d8bxfhgtcfv0" path="res://cards/modifiers/morale.tres" id="5_7bxft"]
 [ext_resource type="Resource" uid="uid://grlmamxkjejd" path="res://cards/modifiers/expenses.tres" id="6_lvoer"]
 
-[sub_resource type="Resource" id="Resource_r27bw"]
+[sub_resource type="Resource" id="Resource_s76lv"]
 script = ExtResource("2_s76lv")
 modifier = ExtResource("5_7bxft")
 amount = 1
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_vx22k"]
+[sub_resource type="Resource" id="Resource_r27bw"]
 script = ExtResource("2_s76lv")
 modifier = ExtResource("3_0jlt4")
 amount = 1
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_my22e"]
+[sub_resource type="Resource" id="Resource_vx22k"]
 script = ExtResource("2_s76lv")
 modifier = ExtResource("4_8bvpg")
 amount = -1
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_lxyyt"]
+[sub_resource type="Resource" id="Resource_my22e"]
 script = ExtResource("2_s76lv")
 modifier = ExtResource("6_lvoer")
 amount = -1
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [resource]
-script = ExtResource("1_lvoer")
-stat = Array[ExtResource("2_s76lv")]([SubResource("Resource_r27bw"), SubResource("Resource_vx22k"), SubResource("Resource_my22e"), SubResource("Resource_lxyyt")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
+script = ExtResource("1_2s8qq")
+stats = Array[ExtResource("2_s76lv")]([SubResource("Resource_s76lv"), SubResource("Resource_r27bw"), SubResource("Resource_vx22k"), SubResource("Resource_my22e")])

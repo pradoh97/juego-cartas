@@ -1,24 +1,24 @@
-[gd_resource type="Resource" script_class="Stats" format=3 uid="uid://b0l5112jnaxv5"]
+[gd_resource type="Resource" script_class="StatsCollection" format=3 uid="uid://b0l5112jnaxv5"]
 
-[ext_resource type="Script" uid="uid://b6ee7xwv3uimj" path="res://stats/stats.gd" id="1_5rwxv"]
+[ext_resource type="Script" uid="uid://rt35dnxylvsn" path="res://stats/stats_collection.gd" id="1_5rwxv"]
 [ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://stats/stat.gd" id="2_1qc1v"]
+[ext_resource type="Resource" uid="uid://cnxpq5hq5siut" path="res://cards/modifiers/obedience.tres" id="3_1qc1v"]
 [ext_resource type="Resource" uid="uid://lkjncu4uvm1p" path="res://cards/modifiers/money.tres" id="3_6a1rk"]
 [ext_resource type="Resource" uid="uid://d8bxfhgtcfv0" path="res://cards/modifiers/morale.tres" id="4_uj7cw"]
-[ext_resource type="Resource" uid="uid://bijpjuyi6v2v2" path="res://cards/modifiers/promotion_progress.tres" id="5_ay425"]
 
-[sub_resource type="Resource" id="Resource_1qc1v"]
+[sub_resource type="Resource" id="Resource_ny1b6"]
+script = ExtResource("2_1qc1v")
+modifier = ExtResource("3_1qc1v")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_qcb2v"]
 script = ExtResource("2_1qc1v")
 modifier = ExtResource("3_6a1rk")
 amount = 1
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_ny1b6"]
-script = ExtResource("2_1qc1v")
-modifier = ExtResource("5_ay425")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_qcb2v"]
+[sub_resource type="Resource" id="Resource_kwnc0"]
 script = ExtResource("2_1qc1v")
 modifier = ExtResource("4_uj7cw")
 amount = -1
@@ -26,5 +26,4 @@ metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [resource]
 script = ExtResource("1_5rwxv")
-stat = Array[ExtResource("2_1qc1v")]([SubResource("Resource_1qc1v"), SubResource("Resource_ny1b6"), SubResource("Resource_qcb2v")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
+stats = Array[ExtResource("2_1qc1v")]([SubResource("Resource_ny1b6"), SubResource("Resource_qcb2v"), SubResource("Resource_kwnc0")])

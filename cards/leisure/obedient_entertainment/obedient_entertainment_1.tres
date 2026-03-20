@@ -12,6 +12,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 [resource]
 script = ExtResource("1_ic0bi")
 text = "Sintonizar \"¿Quién se cagó?\", el reality en el que 6 famosos intentan descubrir quien de ellos se tiró un pedo."
-stats = ExtResource("2_w3570")
 card_result = SubResource("Resource_m62v5")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

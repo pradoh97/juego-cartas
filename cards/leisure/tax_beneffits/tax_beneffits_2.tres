@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_1784f"]
 [ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="1_wuhdl"]
-[ext_resource type="Resource" uid="uid://dlmf8paamxyl5" path="res://cards/leisure/saciety/saciety_stats.tres" id="2_wuhdl"]
+[ext_resource type="Resource" uid="uid://uspbkvxsjnaw" path="res://cards/leisure/tax_beneffits/tax_beneffits_stats.tres" id="2_wuhdl"]
 
 [sub_resource type="Resource" id="Resource_6qfsr"]
 script = ExtResource("1_wuhdl")
@@ -12,6 +12,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 [resource]
 script = ExtResource("1_1784f")
 text = "Participar de la iniciativa gubernamental \"buen ciudadano\" que promete descuentos en los montos finales de sus compras a quienes se afilien y compren solo en los supermercados Happy People Inc. Si se detectan compras en otras tiendas, los beneficios serán revocados."
-stats = ExtResource("2_wuhdl")
 card_result = SubResource("Resource_6qfsr")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
