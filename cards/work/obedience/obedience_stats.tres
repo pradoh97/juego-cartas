@@ -1,11 +1,16 @@
 [gd_resource type="Resource" script_class="Stats" format=3 uid="uid://s0m0xwtt1lrs"]
 
-[ext_resource type="Script" uid="uid://b6ee7xwv3uimj" path="res://cards/stats.gd" id="1_b7wre"]
-[ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://cards/stat.gd" id="2_nxf68"]
+[ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://stats/stat.gd" id="2_nxf68"]
 [ext_resource type="Resource" uid="uid://cnxpq5hq5siut" path="res://cards/modifiers/obedience.tres" id="3_k7kq7"]
 [ext_resource type="Resource" uid="uid://lkjncu4uvm1p" path="res://cards/modifiers/money.tres" id="4_8awqa"]
 [ext_resource type="Resource" uid="uid://d8bxfhgtcfv0" path="res://cards/modifiers/morale.tres" id="5_0anor"]
 [ext_resource type="Resource" uid="uid://bijpjuyi6v2v2" path="res://cards/modifiers/promotion_progress.tres" id="6_svjvs"]
+
+[sub_resource type="GDScript" id="GDScript_xw0bn"]
+script/source = "class_name Stats extends Resource
+
+@export var stats: Array[Stat]
+"
 
 [sub_resource type="Resource" id="Resource_b7wre"]
 script = ExtResource("2_nxf68")
@@ -21,17 +26,16 @@ metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [sub_resource type="Resource" id="Resource_k7kq7"]
 script = ExtResource("2_nxf68")
-modifier = ExtResource("5_0anor")
-amount = -2
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_8awqa"]
-script = ExtResource("2_nxf68")
 modifier = ExtResource("6_svjvs")
 amount = 2
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
+[sub_resource type="Resource" id="Resource_8awqa"]
+script = ExtResource("2_nxf68")
+modifier = ExtResource("5_0anor")
+amount = -2
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
 [resource]
-script = ExtResource("1_b7wre")
-stat = Array[ExtResource("2_nxf68")]([SubResource("Resource_b7wre"), SubResource("Resource_nxf68"), SubResource("Resource_k7kq7"), SubResource("Resource_8awqa")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
+script = SubResource("GDScript_xw0bn")
+stats = Array[ExtResource("2_nxf68")]([SubResource("Resource_b7wre"), SubResource("Resource_nxf68"), SubResource("Resource_k7kq7"), SubResource("Resource_8awqa")])

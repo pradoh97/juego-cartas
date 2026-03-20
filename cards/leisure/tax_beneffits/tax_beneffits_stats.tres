@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Stats" format=3 uid="uid://uspbkvxsjnaw"]
 
-[ext_resource type="Script" uid="uid://b6ee7xwv3uimj" path="res://cards/stats.gd" id="1_q42bb"]
-[ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://cards/stat.gd" id="2_5vo5j"]
+[ext_resource type="Script" uid="uid://b6ee7xwv3uimj" path="res://stats/stats.gd" id="1_q42bb"]
+[ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://stats/stat.gd" id="2_5vo5j"]
 [ext_resource type="Resource" uid="uid://cnxpq5hq5siut" path="res://cards/modifiers/obedience.tres" id="3_bwn3g"]
 [ext_resource type="Resource" uid="uid://d8bxfhgtcfv0" path="res://cards/modifiers/morale.tres" id="5_1uo8w"]
 [ext_resource type="Resource" uid="uid://grlmamxkjejd" path="res://cards/modifiers/expenses.tres" id="5_qbira"]

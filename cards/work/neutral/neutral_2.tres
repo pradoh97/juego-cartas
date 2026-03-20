@@ -1,10 +1,17 @@
 [gd_resource type="Resource" script_class="Card" format=3 uid="uid://dv2fhpn4lvrdp"]
 
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="1_6urk5"]
 [ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_f3hbd"]
 [ext_resource type="Resource" uid="uid://b0l5112jnaxv5" path="res://cards/work/neutral/neutral_stats.tres" id="2_6urk5"]
+
+[sub_resource type="Resource" id="Resource_oiw6k"]
+script = ExtResource("1_6urk5")
+stats_affected = ExtResource("2_6urk5")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_f3hbd")
 text = "¡El cine se reinventa! Tras la baja asistencia los últimos meses, muchas salas del pais comenzarán a servir tragos, comida y contarán con espectáculos de bailarinas."
 stats = ExtResource("2_6urk5")
+card_result = SubResource("Resource_oiw6k")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

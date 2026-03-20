@@ -1,10 +1,17 @@
 [gd_resource type="Resource" script_class="Card" format=3 uid="uid://dyh02ftyy3r21"]
 
 [ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_2b5rh"]
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="1_xf5ud"]
 [ext_resource type="Resource" uid="uid://xj2bmrn7dwer" path="res://cards/leisure/disobedient_entertainment/disobedient_entertainment_stats.tres" id="2_xf5ud"]
+
+[sub_resource type="Resource" id="Resource_pygdu"]
+script = ExtResource("1_xf5ud")
+stats_affected = ExtResource("2_xf5ud")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_2b5rh")
 text = "Participar del club de libros en la Casa de la Cultura de la ciudad. Este mes se lee \"autobiografía del yo\"."
 stats = ExtResource("2_xf5ud")
+card_result = SubResource("Resource_pygdu")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

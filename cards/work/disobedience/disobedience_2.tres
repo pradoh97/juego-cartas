@@ -1,10 +1,17 @@
 [gd_resource type="Resource" script_class="Card" format=3 uid="uid://durhonj76bui3"]
 
 [ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_10jf3"]
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="1_l4hpa"]
 [ext_resource type="Resource" uid="uid://cvpp5ksws36o3" path="res://cards/work/disobedience/disobedience_stats.tres" id="2_l4hpa"]
+
+[sub_resource type="Resource" id="Resource_kypo8"]
+script = ExtResource("1_l4hpa")
+stats_affected = ExtResource("2_l4hpa")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_10jf3")
 text = "Manifestantes logran repeler a las fuerzas represeivas al grito de \"¡fuera cerdos!\" en su reclamo por el pago de salarios atrasados, se convoca nueva manifestación para el miércoles próximo."
 stats = ExtResource("2_l4hpa")
+card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

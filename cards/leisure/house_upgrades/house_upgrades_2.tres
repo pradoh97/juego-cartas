@@ -1,10 +1,17 @@
 [gd_resource type="Resource" script_class="Card" format=3 uid="uid://bek07647trbvt"]
 
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="1_grnw2"]
 [ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_tkkal"]
 [ext_resource type="Resource" uid="uid://dwjkwpta1fxuk" path="res://cards/leisure/house_upgrades/house_upgrades_stats.tres" id="2_tkkal"]
+
+[sub_resource type="Resource" id="Resource_n4glv"]
+script = ExtResource("1_grnw2")
+stats_affected = ExtResource("2_tkkal")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_tkkal")
 text = "Cambiar el aire acondicionado por un ventilador de pie. Permite ahorrar en la factura eléctrica y de todas formas, un poco de transpiración no hace mal a nadie."
 stats = ExtResource("2_tkkal")
+card_result = SubResource("Resource_n4glv")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
