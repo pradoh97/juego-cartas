@@ -48,6 +48,7 @@ func clear_draft():
 		current_draft = null
 
 func new_turn():
+	var event_condition_met: bool = false
 	clear_draft()
 	update_day_turn()
 
@@ -57,12 +58,16 @@ func new_turn():
 	if turn == 0:
 		var lights_tween = create_tween()
 		lights_tween.tween_property($Room, "modulate", Color("#fff"), $TurnTransitionTimer.wait_time)
+
+
+	if day_passed:
+		day_passed = false
+		var stats: StatsCollection = %PlayerStats.get_current_stats()
+		event_condition_met = %StatConditionSystem.event_conditions_met(stats)
+
 	if day <= days.size() - 1:
-		if day_passed:
-			day_passed = false
-			var stats: StatsCollection = %PlayerStats.get_current_stats()
-			%StatConditionSystem.check_conditions(stats)
-		$TurnTransitionTimer.start()
+		if not event_condition_met:
+			$TurnTransitionTimer.start()
 
 func update_day_turn():
 	var turn_with_offset = turn + 1
@@ -72,6 +77,11 @@ func update_day_turn():
 func trigger_game_over(cards: Array[Card]):
 	clear_draft()
 	show_cards(cards)
+	connect_cards_signals()
+
+func connect_cards_signals():
+	if current_draft:
+		current_draft.connect_card_signals_to(_on_card_selected)
 
 func _on_start_game_pressed():
 	$CanvasLayer2/StartGame.queue_free()
@@ -81,13 +91,15 @@ func _on_start_game_pressed():
 
 func _on_card_selected(card: Card):
 	player_stats.set_stats(card)
-	new_turn()
+	if not card.card_result.game_over:
+		new_turn()
+	else:
+		print("game over")
 
 func _on_turn_transition_timer_timeout():
 	create_draft_from_pile()
-	if current_draft:
-		current_draft.connect_card_signals_to(_on_card_selected)
-		turn += 1
+	connect_cards_signals()
+	turn += 1
 	#Move to next day.
 	if turn == 4:
 		turn = 0

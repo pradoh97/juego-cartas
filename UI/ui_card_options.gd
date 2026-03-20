@@ -14,4 +14,5 @@ func set_cards(new_cards: Array[Card]):
 
 func connect_card_signals_to(method: Callable):
 	for card in get_children():
-		(card as UICard).card_selected.connect(method)
+		card = card as UICard
+		card.card_selected.connect(method)
