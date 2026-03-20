@@ -3,7 +3,7 @@ extends Node
 @export var conditions: Array[StatCondition]
 var context: Context = Context.new()
 
-func check_conditions(stats: Stats):
+func check_conditions(stats: StatsCollection):
 	for stat in stats.stats:
 		var condition_index = conditions.find_custom(func(condition): return condition.modifier_type == stat.modifier.type)
 

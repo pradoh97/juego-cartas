@@ -3,617 +3,74 @@
 [ext_resource type="Texture2D" uid="uid://c2iwp7ecp23vj" path="res://room.jpg" id="1_hw8qq"]
 [ext_resource type="Script" uid="uid://dr3jojobk4nb3" path="res://player_room.gd" id="1_plsfm"]
 [ext_resource type="PackedScene" uid="uid://bhunogn8hbghq" path="res://UI/ui_card_options.tscn" id="2_1ojmq"]
-[ext_resource type="Script" uid="uid://b4jlc55gpfbtg" path="res://player/day.gd" id="3_d0s76"]
+[ext_resource type="Script" uid="uid://b4jlc55gpfbtg" path="res://cards/day.gd" id="3_d0s76"]
 [ext_resource type="PackedScene" uid="uid://cj8lkr67agjq3" path="res://player/player_stats.tscn" id="4_1ojmq"]
 [ext_resource type="Resource" uid="uid://butuu5f83a38q" path="res://cards/days/1.tres" id="4_3gq20"]
 [ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="5_4fkm8"]
-[ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://cards/stat.gd" id="6_d0s76"]
-[ext_resource type="Script" uid="uid://b6ee7xwv3uimj" path="res://cards/stats.gd" id="6_pq8mr"]
-[ext_resource type="Script" uid="uid://oxdfipc21itw" path="res://cards/modifier.gd" id="8_4pcic"]
-[ext_resource type="PackedScene" uid="uid://c7q11ioxhalvj" path="res://player/stat_condition_system.tscn" id="9_d0s76"]
-[ext_resource type="Script" uid="uid://b6njg8jje7ia3" path="res://player/stat_condition.gd" id="10_3gq20"]
-
-[sub_resource type="Resource" id="Resource_1l8t1"]
-script = ExtResource("8_4pcic")
-type = 1
-icon = "💰"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_dntw4"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_1l8t1")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_k7ha8"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_8150c"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_k7ha8")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_ns5l8"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_dntw4"), SubResource("Resource_8150c")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
+[ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://stats/stat.gd" id="6_d0s76"]
+[ext_resource type="PackedScene" uid="uid://c7q11ioxhalvj" path="res://stats/stat_condition_system.tscn" id="9_d0s76"]
+[ext_resource type="Script" uid="uid://b6njg8jje7ia3" path="res://stats/stat_condition.gd" id="10_3gq20"]
+[ext_resource type="Script" uid="uid://eg2pbpjd8hmg" path="res://events/game_over.gd" id="11_1t0pb"]
+[ext_resource type="Resource" uid="uid://dl5euqc1gbvkm" path="res://cards/game_over.tres" id="11_358ef"]
 
 [sub_resource type="Resource" id="Resource_lxqrq"]
 script = ExtResource("5_4fkm8")
 text = "Usar cupón de descuento para combo pequeño en Mc Daddys por una hamburguesa Mc Daddys, unas papas Mc Daddys y una bebida Mc Daddys a elección."
-stats = SubResource("Resource_ns5l8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
-
-[sub_resource type="Resource" id="Resource_04ns0"]
-script = ExtResource("8_4pcic")
-icon = "🤝"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_t55rb"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_04ns0")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_4fkm8"]
-script = ExtResource("8_4pcic")
-type = 1
-icon = "💰"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_cjrgx"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_4fkm8")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_srxrq"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_omknk"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_srxrq")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_md580"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_t55rb"), SubResource("Resource_cjrgx"), SubResource("Resource_omknk")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
 
 [sub_resource type="Resource" id="Resource_p2x2x"]
 script = ExtResource("5_4fkm8")
 text = "Ir al teatro a ver \"Revolución-a-dos.\" Una historia de una pareja de idealistas abriendose paso en un mundo golpeado y demente."
-stats = SubResource("Resource_md580")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
-
-[sub_resource type="Resource" id="Resource_i6a45"]
-script = ExtResource("8_4pcic")
-icon = "🤝"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_cjn4c"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_i6a45")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_iduao"]
-script = ExtResource("8_4pcic")
-type = 1
-icon = "💰"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_naeib"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_iduao")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_3y86n"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_v0kml"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_3y86n")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_vybxo"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_cjn4c"), SubResource("Resource_naeib"), SubResource("Resource_v0kml")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
 
 [sub_resource type="Resource" id="Resource_a5wro"]
 script = ExtResource("5_4fkm8")
 text = "Sintonizar \"¿Quién se cagó?\", el reality en el que 6 famosos intentan descubrir quien de ellos se tiró un pedo."
-stats = SubResource("Resource_vybxo")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
-
-[sub_resource type="Resource" id="Resource_c5hbr"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_mijrv"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_c5hbr")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_5uani"]
-script = ExtResource("8_4pcic")
-icon = "🤝"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_ymytt"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_5uani")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_fkhf7"]
-script = ExtResource("8_4pcic")
-type = 4
-icon = "💳"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_7na21"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_fkhf7")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_n17xa"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_mijrv"), SubResource("Resource_ymytt"), SubResource("Resource_7na21")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
 
 [sub_resource type="Resource" id="Resource_n8d8q"]
 script = ExtResource("5_4fkm8")
 text = "Participar del programa gubernamental \"Seguridad patriotica\" que promete reducir el costo del impuesto municipal a los participantes que opten por instalar el chip de seguridad gubernamental (Happy People Inc.) en sus celulares."
-stats = SubResource("Resource_n17xa")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
-
-[sub_resource type="Resource" id="Resource_eek5x"]
-script = ExtResource("8_4pcic")
-icon = "🤝"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_081pk"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_eek5x")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_61sum"]
-script = ExtResource("8_4pcic")
-type = 1
-icon = "💰"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_33fb8"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_61sum")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_ci2kh"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_kjptk"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_ci2kh")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_6ojww"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_081pk"), SubResource("Resource_33fb8"), SubResource("Resource_kjptk")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
 
 [sub_resource type="Resource" id="Resource_4cpkk"]
 script = ExtResource("5_4fkm8")
 text = "Ir al teatro a ver \"Entre Escotes y Faldas.\" Una historia de tetas y culos del ex secretario municipal."
-stats = SubResource("Resource_6ojww")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
-
-[sub_resource type="Resource" id="Resource_osmcv"]
-script = ExtResource("8_4pcic")
-icon = "🤝"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_1ehrb"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_osmcv")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_72y8y"]
-script = ExtResource("8_4pcic")
-type = 1
-icon = "💰"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_yc5do"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_72y8y")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_tudqo"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_51jlq"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_tudqo")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_pvqn7"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_1ehrb"), SubResource("Resource_yc5do"), SubResource("Resource_51jlq")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
 
 [sub_resource type="Resource" id="Resource_vakp2"]
 script = ExtResource("5_4fkm8")
 text = "Participar del club de libros en la Casa de la Cultura de la ciudad. Este mes se lee \"autobiografía del yo\"."
-stats = SubResource("Resource_pvqn7")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
-
-[sub_resource type="Resource" id="Resource_xeqlb"]
-script = ExtResource("8_4pcic")
-type = 1
-icon = "💰"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_077al"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_xeqlb")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_vthbq"]
-script = ExtResource("8_4pcic")
-type = 3
-icon = "💼"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_cmlhr"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_vthbq")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_h78bc"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_v1vn7"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_h78bc")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_mcgkj"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_077al"), SubResource("Resource_cmlhr"), SubResource("Resource_v1vn7")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
 
 [sub_resource type="Resource" id="Resource_56mk0"]
 script = ExtResource("5_4fkm8")
 text = "El despampanante vestido de la primera dama en el nuevo estreno de la película \"Cumbres Carrascosas\" y quién estuvo detrás de su diseño."
-stats = SubResource("Resource_mcgkj")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
-
-[sub_resource type="Resource" id="Resource_ohyu8"]
-script = ExtResource("8_4pcic")
-icon = "🤝"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_qmfmn"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_ohyu8")
-amount = 2
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_wkgy6"]
-script = ExtResource("8_4pcic")
-type = 1
-icon = "💰"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_ucaht"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_wkgy6")
-amount = 2
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_l5lon"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_qx4xn"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_l5lon")
-amount = -2
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_cph22"]
-script = ExtResource("8_4pcic")
-type = 3
-icon = "💼"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_btaou"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_cph22")
-amount = 2
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_jj7sy"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_qmfmn"), SubResource("Resource_ucaht"), SubResource("Resource_qx4xn"), SubResource("Resource_btaou")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
 
 [sub_resource type="Resource" id="Resource_obr07"]
 script = ExtResource("5_4fkm8")
 text = "Presidencia anuncia un nuevo plan de comercio con la república de Zarambique, 400 toneladas de carne vacuna a cambio de 13 computadoras Zarambiquenses."
-stats = SubResource("Resource_jj7sy")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
-
-[sub_resource type="Resource" id="Resource_fjf8c"]
-script = ExtResource("8_4pcic")
-icon = "🤝"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_u8y7x"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_fjf8c")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_wxuji"]
-script = ExtResource("8_4pcic")
-type = 1
-icon = "💰"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_e32qk"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_wxuji")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_hsyei"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_jfi6t"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_hsyei")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_o8ste"]
-script = ExtResource("8_4pcic")
-type = 3
-icon = "💼"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_2ew6r"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_o8ste")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_wmaao"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_u8y7x"), SubResource("Resource_e32qk"), SubResource("Resource_jfi6t"), SubResource("Resource_2ew6r")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
 
 [sub_resource type="Resource" id="Resource_bnbj7"]
 script = ExtResource("5_4fkm8")
 text = "Corrupción en la cámara de comercio, arriban al país 13 computadoras usadas de un intercambio con Zarambique."
-stats = SubResource("Resource_wmaao")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
-
-[sub_resource type="Resource" id="Resource_5h50o"]
-script = ExtResource("8_4pcic")
-icon = "🤝"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_ct0wy"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_5h50o")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_y3s87"]
-script = ExtResource("8_4pcic")
-type = 1
-icon = "💰"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_3d3p1"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_y3s87")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_o0joo"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_7fd8y"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_o0joo")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_mk4h7"]
-script = ExtResource("8_4pcic")
-type = 3
-icon = "💼"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_jienx"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_mk4h7")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_hjy4p"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_ct0wy"), SubResource("Resource_3d3p1"), SubResource("Resource_7fd8y"), SubResource("Resource_jienx")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
 
 [sub_resource type="Resource" id="Resource_7lrpp"]
 script = ExtResource("5_4fkm8")
 text = "Manifestantes logran repeler a las fuerzas represeivas al grito de \"¡fuera cerdos!\" en su reclamo por el pago de salarios atrasados, se convoca nueva manifestación para el miércoles próximo."
-stats = SubResource("Resource_hjy4p")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
-
-[sub_resource type="Resource" id="Resource_eg2ip"]
-script = ExtResource("8_4pcic")
-type = 1
-icon = "💰"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_s6lca"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_eg2ip")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_fvl5w"]
-script = ExtResource("8_4pcic")
-type = 3
-icon = "💼"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_vwkiq"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_fvl5w")
-amount = 1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_5cwjg"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_25wbr"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_5cwjg")
-amount = -1
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_dnljm"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_s6lca"), SubResource("Resource_vwkiq"), SubResource("Resource_25wbr")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
 
 [sub_resource type="Resource" id="Resource_plund"]
 script = ExtResource("5_4fkm8")
 text = "¡El cine se reinventa! Tras la baja asistencia los últimos meses, muchas salas del pais comenzarán a servir tragos, comida y contarán con espectáculos de bailarinas."
-stats = SubResource("Resource_dnljm")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
-
-[sub_resource type="Resource" id="Resource_iwwoh"]
-script = ExtResource("8_4pcic")
-icon = "🤝"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_41pwu"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_iwwoh")
-amount = 2
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_i3agd"]
-script = ExtResource("8_4pcic")
-type = 1
-icon = "💰"
-is_bounded = false
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_0ybo1"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_i3agd")
-amount = 2
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_7lh5a"]
-script = ExtResource("8_4pcic")
-type = 2
-icon = "🧠"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_swire"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_7lh5a")
-amount = -2
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_ybw3q"]
-script = ExtResource("8_4pcic")
-type = 3
-icon = "💼"
-metadata/_custom_type_script = "uid://oxdfipc21itw"
-
-[sub_resource type="Resource" id="Resource_jtjfd"]
-script = ExtResource("6_d0s76")
-modifier = SubResource("Resource_ybw3q")
-amount = 2
-metadata/_custom_type_script = "uid://dxw0nd4jyb835"
-
-[sub_resource type="Resource" id="Resource_kc24c"]
-script = ExtResource("6_pq8mr")
-stat = Array[ExtResource("6_d0s76")]([SubResource("Resource_41pwu"), SubResource("Resource_0ybo1"), SubResource("Resource_swire"), SubResource("Resource_jtjfd")])
-metadata/_custom_type_script = "uid://b6ee7xwv3uimj"
 
 [sub_resource type="Resource" id="Resource_nhu8b"]
 script = ExtResource("5_4fkm8")
 text = "Nueva medida de seguridad: será penado de 6 a 10 años de carcel a quien use la palabra \"Cerdo\" para referirse a oficiales del orden y la paz."
-stats = SubResource("Resource_kc24c")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
 
 [sub_resource type="Resource" id="Resource_iltf1"]
@@ -622,10 +79,16 @@ work_cards = Array[ExtResource("5_4fkm8")]([SubResource("Resource_56mk0"), SubRe
 leisure_cards = Array[ExtResource("5_4fkm8")]([SubResource("Resource_lxqrq"), SubResource("Resource_p2x2x"), SubResource("Resource_a5wro"), SubResource("Resource_n8d8q"), SubResource("Resource_4cpkk"), SubResource("Resource_vakp2")])
 metadata/_custom_type_script = "uid://b4jlc55gpfbtg"
 
+[sub_resource type="Resource" id="Resource_358ef"]
+script = ExtResource("11_1t0pb")
+cards = Array[ExtResource("5_4fkm8")]([ExtResource("11_358ef")])
+metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
+
 [sub_resource type="Resource" id="Resource_1t0pb"]
 script = ExtResource("10_3gq20")
 threshold = 30
 operator = "<"
+event_to_trigger = SubResource("Resource_358ef")
 metadata/_custom_type_script = "uid://b6njg8jje7ia3"
 
 [sub_resource type="Gradient" id="Gradient_hw8qq"]
@@ -676,7 +139,13 @@ offset_left = 0.5404587
 offset_top = 0.3199997
 offset_right = -0.54052734
 offset_bottom = -0.30407715
-stats_ui = {}
+stats_ui = {
+0: NodePath("BoundedStats/Obedience"),
+1: NodePath("HBoxContainer/UnboundedStats/Money"),
+2: NodePath("BoundedStats/Morale"),
+3: NodePath("BoundedStats/PromotionProgress"),
+4: NodePath("HBoxContainer/UnboundedStats/Expenses")
+}
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer2" unique_id=1551022721]
 anchors_preset = 15

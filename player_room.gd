@@ -9,9 +9,20 @@ var turn: int = 0
 var current_draft: UICardOptions
 var day_passed: bool = false
 
-func new_draft():
-	var draft: Array[Card] = []
+signal game_over
+
+func _ready():
+	%StatConditionSystem.context.player_room = self
+	%StatConditionSystem.context.player_stats = %PlayerStats
+
+func show_cards(draft: Array[Card]):
 	var ui_card_options_instance: UICardOptions = card_options_scene.instantiate()
+	ui_card_options_instance.set_cards(draft)
+	$CanvasLayer2.add_child(ui_card_options_instance)
+	current_draft = ui_card_options_instance
+
+func create_draft_from_pile():
+	var draft: Array[Card] = []
 	var card_options: CardOptions = CardOptions.new()
 	var available_cards: Array[Card] = []
 	card_options.cards = days[day].work_cards
@@ -29,10 +40,7 @@ func new_draft():
 
 		var selected_card: Card = available_cards.pop_at(random_card_index)
 		draft.append(selected_card)
-
-	ui_card_options_instance.set_cards(draft)
-	$CanvasLayer2.add_child(ui_card_options_instance)
-	current_draft = ui_card_options_instance
+	show_cards(draft)
 
 func clear_draft():
 	if current_draft:
@@ -52,9 +60,7 @@ func new_turn():
 	if day <= days.size() - 1:
 		if day_passed:
 			day_passed = false
-			var stats: Stats = Stats.new()
-			for stat in %PlayerStats.stats:
-				stats.stat.append(%PlayerStats.stats[stat])
+			var stats: Array[Stat] = %PlayerStats.get_current_stats()
 			%StatConditionSystem.check_conditions(stats)
 		$TurnTransitionTimer.start()
 
@@ -63,18 +69,22 @@ func update_day_turn():
 	var day_with_offset = day + 1
 	player_stats.update_day_turn(day_with_offset, turn_with_offset)
 
+func trigger_game_over(cards: Array[Card]):
+	clear_draft()
+	show_cards(cards)
+
 func _on_start_game_pressed():
 	$CanvasLayer2/StartGame.queue_free()
 	$CanvasLayer2/PanelContainer.queue_free()
 	$CanvasLayer2/PlayerStats.display_stats()
 	new_turn()
 
-func _on_card_selected(card):
+func _on_card_selected(card: Card):
 	player_stats.set_stats(card)
 	new_turn()
 
 func _on_turn_transition_timer_timeout():
-	new_draft()
+	create_draft_from_pile()
 	if current_draft:
 		current_draft.connect_card_signals_to(_on_card_selected)
 		turn += 1

@@ -25,7 +25,7 @@ func throw_dice(amount: int = 1):
 	return throw_value
 
 func set_stats(selected_card: Card):
-	for card_stat in selected_card.stats.stat:
+	for card_stat in selected_card.card_result.stats_affected.stats:
 		var modifier_type = card_stat.modifier.type
 		var ui_node: StatUI = stats_ui[modifier_type]
 		var transition: bool = false
@@ -41,3 +41,9 @@ func update_day_turn(day: int, turn: int):
 
 func display_stats():
 	visible = true
+
+func get_current_stats() -> Array[Stat]:
+	var current_stats: Array[Stat]
+	for stat in stats:
+		current_stats.append(stats[stat])
+	return current_stats
