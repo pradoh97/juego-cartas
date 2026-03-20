@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c7q11ioxhalvj"]
+
+[ext_resource type="Script" uid="uid://bq0k4e3eg2glm" path="res://stats/stat_condition_system.gd" id="1_j8o34"]
+
+[node name="StatConditionSystem" type="Node" unique_id=566690019]
+script = ExtResource("1_j8o34")
