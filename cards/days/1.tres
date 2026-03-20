@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://cbemgcuwum3vr" path="res://cards/leisure/saciety/saciety_2.tres" id="5_fjhjl"]
 [ext_resource type="Resource" uid="uid://bues8j8jsjwe7" path="res://cards/leisure/obedient_entertainment/obedient_entertainment_2.tres" id="6_xrc0n"]
 [ext_resource type="Resource" uid="uid://dyh02ftyy3r21" path="res://cards/leisure/disobedient_entertainment/disobedient_entertainment_2.tres" id="7_gi3us"]
-[ext_resource type="Script" uid="uid://b4jlc55gpfbtg" path="res://player/day.gd" id="8_351b6"]
+[ext_resource type="Script" uid="uid://b4jlc55gpfbtg" path="res://cards/day.gd" id="8_351b6"]
 [ext_resource type="Resource" uid="uid://reucefhumw0c" path="res://cards/work/neutral/neutral_1.tres" id="9_wyqkx"]
 [ext_resource type="Resource" uid="uid://dvcpasdxjtylb" path="res://cards/work/obedience/obedience_1.tres" id="10_7unl7"]
 [ext_resource type="Resource" uid="uid://dxkc1lj1f6yeo" path="res://cards/work/disobedience/disobedience_1.tres" id="11_y82mb"]
