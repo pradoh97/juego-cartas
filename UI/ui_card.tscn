@@ -1,42 +1,9 @@
 [gd_scene format=3 uid="uid://bfywjnn4mwwee"]
 
 [ext_resource type="Script" uid="uid://dvflfo43vp6cw" path="res://UI/ui_card.gd" id="1_dr4nk"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivai2"]
-bg_color = Color(0, 0, 0, 0.78431374)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(1, 1, 1, 0.78431374)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4k7q8"]
-bg_color = Color(0, 0, 0, 0.6666667)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(1, 1, 1, 0.6666667)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwofj"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
+[ext_resource type="StyleBox" uid="uid://dk01ivhac2f57" path="res://cards/styles/normal_card.tres" id="2_kk2s7"]
+[ext_resource type="StyleBox" uid="uid://s2iyoiwk5xih" path="res://cards/styles/pressed_card.tres" id="3_2aqqg"]
+[ext_resource type="StyleBox" uid="uid://cqxwt7573w0pp" path="res://cards/styles/hover_card.tres" id="4_i2axk"]
 
 [node name="Card" type="CenterContainer" unique_id=1806750386]
 anchors_preset = -1
@@ -53,9 +20,9 @@ script = ExtResource("1_dr4nk")
 [node name="Text" type="Button" parent="." unique_id=560099225]
 custom_minimum_size = Vector2(300, 500)
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_ivai2")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_4k7q8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_nwofj")
+theme_override_styles/normal = ExtResource("2_kk2s7")
+theme_override_styles/pressed = ExtResource("3_2aqqg")
+theme_override_styles/hover = ExtResource("4_i2axk")
 autowrap_mode = 2
 
 [connection signal="pressed" from="Text" to="." method="_on_button_pressed"]
