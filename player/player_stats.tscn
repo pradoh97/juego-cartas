@@ -11,30 +11,35 @@
 [ext_resource type="Script" uid="uid://b3s2aornlocak" path="res://UI/ui_day_turn.gd" id="9_os73m"]
 
 [sub_resource type="Resource" id="Resource_g48p5"]
+resource_local_to_scene = true
 script = ExtResource("3_r78v2")
 modifier = ExtResource("4_draim")
 amount = 40
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [sub_resource type="Resource" id="Resource_os73m"]
+resource_local_to_scene = true
 script = ExtResource("3_r78v2")
 modifier = ExtResource("7_os73m")
 amount = 50
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [sub_resource type="Resource" id="Resource_on5c7"]
+resource_local_to_scene = true
 script = ExtResource("3_r78v2")
 modifier = ExtResource("5_g48p5")
 amount = 20
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [sub_resource type="Resource" id="Resource_ptpp5"]
+resource_local_to_scene = true
 script = ExtResource("3_r78v2")
 modifier = ExtResource("6_os73m")
 amount = 10
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
 [sub_resource type="Resource" id="Resource_okla3"]
+resource_local_to_scene = true
 script = ExtResource("3_r78v2")
 modifier = ExtResource("7_on5c7")
 amount = 20
