@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://djy60p3wu6rm5"]
+
+[ext_resource type="Theme" uid="uid://d0nh77u2jhsq5" path="res://UI/styles/buttons_theme.tres" id="1_y26ei"]
+[ext_resource type="Script" uid="uid://chmonjeimrywc" path="res://game_over.gd" id="1_yxx3c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yxx3c"]
+
+[node name="GameOver" type="PanelContainer" unique_id=794386271]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 145.77777
+offset_top = 82.0
+offset_right = -145.77777
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yxx3c")
+script = ExtResource("1_yxx3c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1053076217]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Reason" type="Label" parent="VBoxContainer" unique_id=821134061]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="NewGame" type="Button" parent="VBoxContainer" unique_id=1015628212]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_y26ei")
+text = "New game"
+
+[node name="Timer" type="Timer" parent="." unique_id=1174633959]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

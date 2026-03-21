@@ -1,0 +1,809 @@
+[gd_scene format=3 uid="uid://b5eg0d75m8p0i"]
+
+[ext_resource type="Texture2D" uid="uid://c2iwp7ecp23vj" path="res://player_room/room.jpg" id="1_hw8qq"]
+[ext_resource type="Script" uid="uid://dr3jojobk4nb3" path="res://player_room/player_room.gd" id="1_plsfm"]
+[ext_resource type="PackedScene" uid="uid://bhunogn8hbghq" path="res://UI/ui_card_options.tscn" id="2_1ojmq"]
+[ext_resource type="Script" uid="uid://b4jlc55gpfbtg" path="res://cards/day.gd" id="3_d0s76"]
+[ext_resource type="PackedScene" uid="uid://cj8lkr67agjq3" path="res://player/player_stats.tscn" id="4_1ojmq"]
+[ext_resource type="Resource" uid="uid://butuu5f83a38q" path="res://cards/days/1.tres" id="4_3gq20"]
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="5_4fkm8"]
+[ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://stats/stat.gd" id="6_d0s76"]
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="6_pq8mr"]
+[ext_resource type="Script" uid="uid://rt35dnxylvsn" path="res://stats/stats_collection.gd" id="7_4pcic"]
+[ext_resource type="Script" uid="uid://oxdfipc21itw" path="res://stats/modifier.gd" id="9_1l8t1"]
+[ext_resource type="PackedScene" uid="uid://c7q11ioxhalvj" path="res://stats/stat_condition_system.tscn" id="9_d0s76"]
+[ext_resource type="Script" uid="uid://b6njg8jje7ia3" path="res://stats/stat_condition.gd" id="10_3gq20"]
+[ext_resource type="PackedScene" uid="uid://djy60p3wu6rm5" path="res://game_over.tscn" id="10_excou"]
+[ext_resource type="Script" uid="uid://eg2pbpjd8hmg" path="res://events/game_over.gd" id="11_1t0pb"]
+[ext_resource type="Resource" uid="uid://dl5euqc1gbvkm" path="res://cards/game_over.tres" id="11_358ef"]
+[ext_resource type="Theme" uid="uid://d0nh77u2jhsq5" path="res://UI/styles/buttons_theme.tres" id="16_j01a8"]
+[ext_resource type="Resource" uid="uid://cnxpq5hq5siut" path="res://cards/modifiers/obedience.tres" id="17_js3qq"]
+[ext_resource type="Resource" uid="uid://lkjncu4uvm1p" path="res://cards/modifiers/money.tres" id="18_qpdo3"]
+[ext_resource type="Resource" uid="uid://d8bxfhgtcfv0" path="res://cards/modifiers/morale.tres" id="19_5446e"]
+[ext_resource type="Resource" uid="uid://bijpjuyi6v2v2" path="res://cards/modifiers/promotion_progress.tres" id="20_h4shd"]
+[ext_resource type="Resource" uid="uid://grlmamxkjejd" path="res://cards/modifiers/expenses.tres" id="21_i2awh"]
+
+[sub_resource type="Resource" id="Resource_dntw4"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_k7ha8"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_dntw4")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_8150c"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_ns5l8"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_8150c")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_lxqrq"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_k7ha8"), SubResource("Resource_ns5l8")])
+
+[sub_resource type="Resource" id="Resource_04ns0"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_lxqrq")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_t55rb"]
+script = ExtResource("5_4fkm8")
+text = "Usar cupón de descuento para combo pequeño en Mc Daddys por una hamburguesa Mc Daddys, unas papas Mc Daddys y una bebida Mc Daddys a elección."
+card_result = SubResource("Resource_04ns0")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_4fkm8"]
+script = ExtResource("9_1l8t1")
+icon = "🤝"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_cjrgx"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_4fkm8")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_srxrq"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_omknk"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_srxrq")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_md580"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_p2x2x"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_md580")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_i6a45"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_cjrgx"), SubResource("Resource_omknk"), SubResource("Resource_p2x2x")])
+
+[sub_resource type="Resource" id="Resource_cjn4c"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_i6a45")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_iduao"]
+script = ExtResource("5_4fkm8")
+text = "Ir al teatro a ver \"Revolución-a-dos.\" Una historia de una pareja de idealistas abriendose paso en un mundo golpeado y demente."
+card_result = SubResource("Resource_cjn4c")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_naeib"]
+script = ExtResource("9_1l8t1")
+icon = "🤝"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_3y86n"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_naeib")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_v0kml"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_vybxo"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_v0kml")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_a5wro"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_c5hbr"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_a5wro")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_mijrv"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_3y86n"), SubResource("Resource_vybxo"), SubResource("Resource_c5hbr")])
+
+[sub_resource type="Resource" id="Resource_5uani"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_mijrv")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_ymytt"]
+script = ExtResource("5_4fkm8")
+text = "Sintonizar \"¿Quién se cagó?\", el reality en el que 6 famosos intentan descubrir quien de ellos se tiró un pedo."
+card_result = SubResource("Resource_5uani")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_fkhf7"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_7na21"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_fkhf7")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_n17xa"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_n8d8q"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_n17xa")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_eek5x"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_7na21"), SubResource("Resource_n8d8q")])
+
+[sub_resource type="Resource" id="Resource_081pk"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_eek5x")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_61sum"]
+script = ExtResource("5_4fkm8")
+text = "Participar del programa gubernamental \"Seguridad patriotica\" que promete reducir el costo del impuesto municipal a los participantes que opten por instalar el chip de seguridad gubernamental (Happy People Inc.) en sus celulares."
+card_result = SubResource("Resource_081pk")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_33fb8"]
+script = ExtResource("9_1l8t1")
+icon = "🤝"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_ci2kh"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_33fb8")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_kjptk"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_6ojww"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_kjptk")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_4cpkk"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_osmcv"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_4cpkk")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_1ehrb"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_ci2kh"), SubResource("Resource_6ojww"), SubResource("Resource_osmcv")])
+
+[sub_resource type="Resource" id="Resource_72y8y"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_1ehrb")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_yc5do"]
+script = ExtResource("5_4fkm8")
+text = "Ir al teatro a ver \"Entre Escotes y Faldas.\" Una historia de tetas y culos del ex secretario municipal."
+card_result = SubResource("Resource_72y8y")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_tudqo"]
+script = ExtResource("9_1l8t1")
+icon = "🤝"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_51jlq"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_tudqo")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_pvqn7"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_vakp2"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_pvqn7")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_xeqlb"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_077al"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_xeqlb")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_vthbq"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_51jlq"), SubResource("Resource_vakp2"), SubResource("Resource_077al")])
+
+[sub_resource type="Resource" id="Resource_cmlhr"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_vthbq")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_h78bc"]
+script = ExtResource("5_4fkm8")
+text = "Participar del club de libros en la Casa de la Cultura de la ciudad. Este mes se lee \"autobiografía del yo\"."
+card_result = SubResource("Resource_cmlhr")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_v1vn7"]
+script = ExtResource("9_1l8t1")
+icon = "🤝"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_mcgkj"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_v1vn7")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_56mk0"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_ohyu8"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_56mk0")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_qmfmn"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_wkgy6"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_qmfmn")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_ucaht"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_mcgkj"), SubResource("Resource_ohyu8"), SubResource("Resource_wkgy6")])
+
+[sub_resource type="Resource" id="Resource_l5lon"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_ucaht")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_qx4xn"]
+script = ExtResource("5_4fkm8")
+text = "El despampanante vestido de la primera dama en el nuevo estreno de la película \"Cumbres Carrascosas\" y quién estuvo detrás de su diseño."
+card_result = SubResource("Resource_l5lon")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_cph22"]
+script = ExtResource("9_1l8t1")
+icon = "🤝"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_btaou"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_cph22")
+amount = 2
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_jj7sy"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_obr07"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_jj7sy")
+amount = 2
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_fjf8c"]
+script = ExtResource("9_1l8t1")
+type = 3
+icon = "💼"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_u8y7x"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_fjf8c")
+amount = 2
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_wxuji"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_e32qk"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_wxuji")
+amount = -2
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_hsyei"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_btaou"), SubResource("Resource_obr07"), SubResource("Resource_u8y7x"), SubResource("Resource_e32qk")])
+
+[sub_resource type="Resource" id="Resource_jfi6t"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_hsyei")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_o8ste"]
+script = ExtResource("5_4fkm8")
+text = "Presidencia anuncia un nuevo plan de comercio con la república de Zarambique, 400 toneladas de carne vacuna a cambio de 13 computadoras Zarambiquenses."
+card_result = SubResource("Resource_jfi6t")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_2ew6r"]
+script = ExtResource("9_1l8t1")
+icon = "🤝"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_wmaao"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_2ew6r")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_bnbj7"]
+script = ExtResource("9_1l8t1")
+type = 3
+icon = "💼"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_5h50o"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_bnbj7")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_ct0wy"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_y3s87"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_ct0wy")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_3d3p1"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_o0joo"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_3d3p1")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_7fd8y"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_wmaao"), SubResource("Resource_5h50o"), SubResource("Resource_y3s87"), SubResource("Resource_o0joo")])
+
+[sub_resource type="Resource" id="Resource_mk4h7"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_7fd8y")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_jienx"]
+script = ExtResource("5_4fkm8")
+text = "Corrupción en la cámara de comercio, arriban al país 13 computadoras usadas de un intercambio con Zarambique."
+card_result = SubResource("Resource_mk4h7")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_hjy4p"]
+script = ExtResource("9_1l8t1")
+icon = "🤝"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_7lrpp"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_hjy4p")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_eg2ip"]
+script = ExtResource("9_1l8t1")
+type = 3
+icon = "💼"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_s6lca"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_eg2ip")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_fvl5w"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_vwkiq"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_fvl5w")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_5cwjg"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_25wbr"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_5cwjg")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_dnljm"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_7lrpp"), SubResource("Resource_s6lca"), SubResource("Resource_vwkiq"), SubResource("Resource_25wbr")])
+
+[sub_resource type="Resource" id="Resource_plund"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_dnljm")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_iwwoh"]
+script = ExtResource("5_4fkm8")
+text = "Manifestantes logran repeler a las fuerzas represeivas al grito de \"¡fuera cerdos!\" en su reclamo por el pago de salarios atrasados, se convoca nueva manifestación para el miércoles próximo."
+card_result = SubResource("Resource_plund")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_41pwu"]
+script = ExtResource("9_1l8t1")
+icon = "🤝"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_i3agd"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_41pwu")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_0ybo1"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_7lh5a"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_0ybo1")
+amount = 1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_swire"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_ybw3q"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_swire")
+amount = -1
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_jtjfd"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_i3agd"), SubResource("Resource_7lh5a"), SubResource("Resource_ybw3q")])
+
+[sub_resource type="Resource" id="Resource_kc24c"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_jtjfd")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_nhu8b"]
+script = ExtResource("5_4fkm8")
+text = "¡El cine se reinventa! Tras la baja asistencia los últimos meses, muchas salas del pais comenzarán a servir tragos, comida y contarán con espectáculos de bailarinas."
+card_result = SubResource("Resource_kc24c")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_iltf1"]
+script = ExtResource("9_1l8t1")
+icon = "🤝"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_qe32m"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_iltf1")
+amount = 2
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_ovceh"]
+script = ExtResource("9_1l8t1")
+type = 1
+icon = "💰"
+is_bounded = false
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_f8mbn"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_ovceh")
+amount = 2
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_k3wqe"]
+script = ExtResource("9_1l8t1")
+type = 3
+icon = "💼"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_3ieyt"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_k3wqe")
+amount = 2
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_ghlk2"]
+script = ExtResource("9_1l8t1")
+type = 2
+icon = "🧠"
+metadata/_custom_type_script = "uid://oxdfipc21itw"
+
+[sub_resource type="Resource" id="Resource_sj2r8"]
+script = ExtResource("6_d0s76")
+modifier = SubResource("Resource_ghlk2")
+amount = -2
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_m4fo4"]
+script = ExtResource("7_4pcic")
+stats = Array[ExtResource("6_d0s76")]([SubResource("Resource_qe32m"), SubResource("Resource_f8mbn"), SubResource("Resource_3ieyt"), SubResource("Resource_sj2r8")])
+
+[sub_resource type="Resource" id="Resource_q332r"]
+script = ExtResource("6_pq8mr")
+stats_affected = SubResource("Resource_m4fo4")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_lflki"]
+script = ExtResource("5_4fkm8")
+text = "Nueva medida de seguridad: será penado de 6 a 10 años de carcel a quien use la palabra \"Cerdo\" para referirse a oficiales del orden y la paz."
+card_result = SubResource("Resource_q332r")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_vuf53"]
+script = ExtResource("3_d0s76")
+work_cards = Array[ExtResource("5_4fkm8")]([SubResource("Resource_qx4xn"), SubResource("Resource_o8ste"), SubResource("Resource_jienx"), SubResource("Resource_iwwoh"), SubResource("Resource_nhu8b"), SubResource("Resource_lflki")])
+leisure_cards = Array[ExtResource("5_4fkm8")]([SubResource("Resource_t55rb"), SubResource("Resource_iduao"), SubResource("Resource_ymytt"), SubResource("Resource_61sum"), SubResource("Resource_yc5do"), SubResource("Resource_h78bc")])
+metadata/_custom_type_script = "uid://b4jlc55gpfbtg"
+
+[sub_resource type="Resource" id="Resource_358ef"]
+script = ExtResource("11_1t0pb")
+cards = Array[ExtResource("5_4fkm8")]([ExtResource("11_358ef")])
+details = "Los oficiales del gobierno no aprueban tu editorial, te han pedido por favor caer encima de unas cuantas balas."
+metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
+
+[sub_resource type="Resource" id="Resource_1t0pb"]
+script = ExtResource("10_3gq20")
+threshold = 30
+operator = "<"
+event_to_trigger = SubResource("Resource_358ef")
+metadata/_custom_type_script = "uid://b6njg8jje7ia3"
+
+[sub_resource type="Gradient" id="Gradient_hw8qq"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8tnse"]
+gradient = SubResource("Gradient_hw8qq")
+
+[sub_resource type="Resource" id="Resource_g48p5"]
+resource_local_to_scene = true
+script = ExtResource("6_d0s76")
+modifier = ExtResource("17_js3qq")
+amount = 40
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_os73m"]
+resource_local_to_scene = true
+script = ExtResource("6_d0s76")
+modifier = ExtResource("18_qpdo3")
+amount = 50
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_on5c7"]
+resource_local_to_scene = true
+script = ExtResource("6_d0s76")
+modifier = ExtResource("19_5446e")
+amount = 20
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_ptpp5"]
+resource_local_to_scene = true
+script = ExtResource("6_d0s76")
+modifier = ExtResource("20_h4shd")
+amount = 10
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[sub_resource type="Resource" id="Resource_okla3"]
+resource_local_to_scene = true
+script = ExtResource("6_d0s76")
+modifier = ExtResource("21_i2awh")
+amount = 20
+metadata/_custom_type_script = "uid://dxw0nd4jyb835"
+
+[node name="PlayerRoom" type="Node2D" unique_id=381902971 node_paths=PackedStringArray("player_stats")]
+script = ExtResource("1_plsfm")
+player_stats = NodePath("CanvasLayer2/PlayerStats")
+days = Array[ExtResource("3_d0s76")]([ExtResource("4_3gq20"), SubResource("Resource_vuf53")])
+card_options_scene = ExtResource("2_1ojmq")
+game_over_scene = ExtResource("10_excou")
+
+[node name="StatConditionSystem" parent="." unique_id=566690019 instance=ExtResource("9_d0s76")]
+unique_name_in_owner = true
+conditions = Array[ExtResource("10_3gq20")]([SubResource("Resource_1t0pb")])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1039303709]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1162560088]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_8tnse")
+
+[node name="Room" type="Sprite2D" parent="." unique_id=1690148002]
+position = Vector2(0, -464)
+texture = ExtResource("1_hw8qq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=39536923]
+zoom = Vector2(0.3, 0.3)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=195440851]
+
+[node name="PlayerStats" parent="CanvasLayer2" unique_id=45892594 node_paths=PackedStringArray("stats_ui") instance=ExtResource("4_1ojmq")]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.052
+anchor_top = 0.035
+anchor_right = 0.9480001
+anchor_bottom = 0.9480001
+offset_left = 0.5404587
+offset_top = 0.3199997
+offset_right = -0.54052734
+offset_bottom = -0.30407715
+stats_ui = {
+0: NodePath("BoundedStats/Obedience"),
+1: NodePath("HBoxContainer/UnboundedStats/Money"),
+2: NodePath("BoundedStats/Morale"),
+3: NodePath("BoundedStats/PromotionProgress"),
+4: NodePath("HBoxContainer/UnboundedStats/Expenses")
+}
+stats = Dictionary[int, ExtResource("6_d0s76")]({
+0: SubResource("Resource_g48p5"),
+1: SubResource("Resource_os73m"),
+2: SubResource("Resource_on5c7"),
+3: SubResource("Resource_ptpp5"),
+4: SubResource("Resource_okla3")
+})
+
+[node name="Overlay" type="PanelContainer" parent="CanvasLayer2" unique_id=1551022721]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartGame" type="Button" parent="CanvasLayer2" unique_id=2068611433]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -15.5
+offset_right = 37.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("16_j01a8")
+text = "New day"
+
+[node name="TurnTransitionTimer" type="Timer" parent="." unique_id=1858436834]
+one_shot = true
+
+[connection signal="pressed" from="CanvasLayer2/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="timeout" from="TurnTransitionTimer" to="." method="_on_turn_transition_timer_timeout"]
