@@ -13,4 +13,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 script = ExtResource("1_2b5rh")
 text = "Participar del club de libros en la Casa de la Cultura de la ciudad. Este mes se lee \"autobiografía del yo\"."
 card_result = SubResource("Resource_pygdu")
+hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

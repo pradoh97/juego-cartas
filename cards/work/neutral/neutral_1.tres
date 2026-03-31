@@ -13,4 +13,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 script = ExtResource("1_chvjt")
 text = "El despampanante vestido de la primera dama en el nuevo estreno de la película \"Cumbres Carrascosas\" y quién estuvo detrás de su diseño."
 card_result = SubResource("Resource_dnuvc")
+hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

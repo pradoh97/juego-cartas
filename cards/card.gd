@@ -1,7 +1,7 @@
 extends Resource
 class_name Card
 
-@export var text: String
+@export_multiline() var text: String
 @export var card_result: CardResult
 @export var hide_if_shown: bool = true
 

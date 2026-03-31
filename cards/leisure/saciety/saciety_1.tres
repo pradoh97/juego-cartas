@@ -13,4 +13,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 script = ExtResource("1_f05km")
 text = "Usar cupón de descuento para combo pequeño en Mc Daddys por una hamburguesa Mc Daddys, unas papas Mc Daddys y una bebida Mc Daddys a elección."
 card_result = SubResource("Resource_0cvrk")
+hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

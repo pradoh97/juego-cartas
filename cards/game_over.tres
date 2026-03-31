@@ -12,4 +12,5 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 script = ExtResource("1_lmwua")
 text = "Abrir la puerta."
 card_result = SubResource("Resource_ykbug")
+hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

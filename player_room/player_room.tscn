@@ -687,35 +687,35 @@ colors = PackedColorArray(0, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_8tnse"]
 gradient = SubResource("Gradient_hw8qq")
 
-[sub_resource type="Resource" id="Resource_g48p5"]
+[sub_resource type="Resource" id="Resource_js3qq"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("17_js3qq")
 amount = 40
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_os73m"]
+[sub_resource type="Resource" id="Resource_qpdo3"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("18_qpdo3")
 amount = 50
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_on5c7"]
+[sub_resource type="Resource" id="Resource_5446e"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("19_5446e")
 amount = 20
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_ptpp5"]
+[sub_resource type="Resource" id="Resource_h4shd"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("20_h4shd")
 amount = 10
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_okla3"]
+[sub_resource type="Resource" id="Resource_i2awh"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("21_i2awh")
@@ -772,11 +772,11 @@ stats_ui = {
 4: NodePath("HBoxContainer/UnboundedStats/Expenses")
 }
 stats = Dictionary[int, ExtResource("6_d0s76")]({
-0: SubResource("Resource_g48p5"),
-1: SubResource("Resource_os73m"),
-2: SubResource("Resource_on5c7"),
-3: SubResource("Resource_ptpp5"),
-4: SubResource("Resource_okla3")
+0: SubResource("Resource_js3qq"),
+1: SubResource("Resource_qpdo3"),
+2: SubResource("Resource_5446e"),
+3: SubResource("Resource_h4shd"),
+4: SubResource("Resource_i2awh")
 })
 
 [node name="Overlay" type="PanelContainer" parent="CanvasLayer2" unique_id=1551022721]
