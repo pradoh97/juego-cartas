@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Day" format=3 uid="uid://bxwcb0t3bi4b4"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_mkimd"]
+[ext_resource type="Resource" uid="uid://bhf6n2p4nis70" path="res://cards/leisure/promotion_progress/promotion_progress_1.tres" id="2_4lugb"]
+[ext_resource type="Script" uid="uid://b4jlc55gpfbtg" path="res://cards/day.gd" id="2_yamp1"]
+[ext_resource type="Resource" uid="uid://csedq8pvf6twp" path="res://cards/work/disobedience/disobedience_5.tres" id="3_7m0bv"]
+[ext_resource type="Resource" uid="uid://4v40igl75guw" path="res://cards/leisure/saciety/saciety_5.tres" id="3_kmaqn"]
+[ext_resource type="Resource" uid="uid://bv0p5x5fpg0gv" path="res://cards/work/disobedience/disobedience_6.tres" id="4_21ach"]
+[ext_resource type="Resource" uid="uid://bek07647trbvt" path="res://cards/leisure/house_upgrades/house_upgrades_2.tres" id="4_t2cik"]
+[ext_resource type="Resource" uid="uid://cytdu04am1chu" path="res://cards/work/neutral/neutral_5.tres" id="5_4lugb"]
+[ext_resource type="Resource" uid="uid://b58xwk0elgl1g" path="res://cards/leisure/obedient_entertainment/obedient_entertainment_4.tres" id="5_x42iu"]
+[ext_resource type="Resource" uid="uid://cniiuipc6f28d" path="res://cards/work/neutral/neutral_6.tres" id="6_kmaqn"]
+[ext_resource type="Resource" uid="uid://detd1c5s105bq" path="res://cards/leisure/tax_beneffits/tax_beneffits_2.tres" id="6_t2cik"]
+[ext_resource type="Resource" uid="uid://pfjkmhte1ijs" path="res://cards/work/obedience/obedience_5.tres" id="7_t2cik"]
+[ext_resource type="Resource" uid="uid://cpj35l81s0xol" path="res://cards/leisure/saciety/saciety_6.tres" id="7_x42iu"]
+[ext_resource type="Resource" uid="uid://bpbwprnceqbsw" path="res://cards/work/obedience/obedience_6.tres" id="8_x42iu"]
+
+[resource]
+script = ExtResource("2_yamp1")
+work_cards = Array[ExtResource("1_mkimd")]([ExtResource("3_7m0bv"), ExtResource("4_21ach"), ExtResource("5_4lugb"), ExtResource("6_kmaqn"), ExtResource("7_t2cik"), ExtResource("8_x42iu")])
+leisure_cards = Array[ExtResource("1_mkimd")]([ExtResource("2_4lugb"), ExtResource("3_kmaqn"), ExtResource("4_t2cik"), ExtResource("5_x42iu"), ExtResource("6_t2cik"), ExtResource("7_x42iu")])
+metadata/_custom_type_script = "uid://b4jlc55gpfbtg"

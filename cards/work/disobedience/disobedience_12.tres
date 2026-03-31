@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://b8fak4gjt3t4p"]
+
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="1_5tumx"]
+[ext_resource type="Resource" uid="uid://cvpp5ksws36o3" path="res://cards/work/disobedience/disobedience_stats.tres" id="2_5t38i"]
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="3_pr0ij"]
+
+[sub_resource type="Resource" id="Resource_kypo8"]
+script = ExtResource("1_5tumx")
+stats_affected = ExtResource("2_5t38i")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[resource]
+script = ExtResource("3_pr0ij")
+text = "Fiestas privadas y derroche, hay reportes de que presidencia utilizó las raciones de la repartición comunal para la gala de Happy People Inc. se cancela la repartición de raciones para la población de esta semana. Aún no se sabe cuando será la próxima entrega."
+card_result = SubResource("Resource_kypo8")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"

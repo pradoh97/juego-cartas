@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://bopiqk2mqd3m7"]
+
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="1_rgdkc"]
+[ext_resource type="Resource" uid="uid://b0l5112jnaxv5" path="res://cards/work/neutral/neutral_stats.tres" id="2_7x8co"]
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="3_lherr"]
+
+[sub_resource type="Resource" id="Resource_oiw6k"]
+script = ExtResource("1_rgdkc")
+stats_affected = ExtResource("2_7x8co")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[resource]
+script = ExtResource("3_lherr")
+text = "La vida sin trabajo no está muy lejos: estos son los nueve videos que tienes que ver para cambiar tu mentalidad y pensar como los ricos."
+card_result = SubResource("Resource_oiw6k")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"

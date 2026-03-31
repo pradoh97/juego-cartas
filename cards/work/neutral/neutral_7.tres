@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://63actkhsftft"]
+
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="1_7r7o4"]
+[ext_resource type="Resource" uid="uid://b0l5112jnaxv5" path="res://cards/work/neutral/neutral_stats.tres" id="2_fkycq"]
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="3_3r88k"]
+
+[sub_resource type="Resource" id="Resource_oiw6k"]
+script = ExtResource("1_7r7o4")
+stats_affected = ExtResource("2_fkycq")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[resource]
+script = ExtResource("3_3r88k")
+text = "La feria de emprendedores cancela sus tres encuentros por baja cantidad de inscriptos. Se espera más motivación para el trimestre próximo."
+card_result = SubResource("Resource_oiw6k")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"

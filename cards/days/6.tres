@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Day" format=3 uid="uid://cnwntmy3e3ufw"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_qvrlq"]
+[ext_resource type="Resource" uid="uid://lc0mghtp72mu" path="res://cards/leisure/obedient_entertainment/obedient_entertainment_7.tres" id="2_5ngjo"]
+[ext_resource type="Script" uid="uid://b4jlc55gpfbtg" path="res://cards/day.gd" id="2_h6gug"]
+[ext_resource type="Resource" uid="uid://dpdhaijh2bqi8" path="res://cards/work/disobedience/disobedience_11.tres" id="3_210l8"]
+[ext_resource type="Resource" uid="uid://yqy3k55sbf57" path="res://cards/leisure/tax_beneffits/tax_beneffits_3.tres" id="3_500he"]
+[ext_resource type="Resource" uid="uid://b8fak4gjt3t4p" path="res://cards/work/disobedience/disobedience_12.tres" id="4_5ngjo"]
+[ext_resource type="Resource" uid="uid://fenj0we0eoad" path="res://cards/leisure/tax_beneffits/tax_beneffits_4.tres" id="4_v1p7p"]
+[ext_resource type="Resource" uid="uid://daawed774ugh2" path="res://cards/work/disobedience/disobedience_13.tres" id="5_500he"]
+[ext_resource type="Resource" uid="uid://ds56wxbuhbwi8" path="res://cards/work/obedience/obedience_11.tres" id="6_v1p7p"]
+[ext_resource type="Resource" uid="uid://bsm5mtqhi4ax4" path="res://cards/work/obedience/obedience_12.tres" id="7_37xcl"]
+[ext_resource type="Resource" uid="uid://xtguqaj4k88s" path="res://cards/work/obedience/obedience_13.tres" id="8_sgs0n"]
+
+[resource]
+script = ExtResource("2_h6gug")
+work_cards = Array[ExtResource("1_qvrlq")]([ExtResource("3_210l8"), ExtResource("4_5ngjo"), ExtResource("5_500he"), ExtResource("6_v1p7p"), ExtResource("7_37xcl"), ExtResource("8_sgs0n")])
+leisure_cards = Array[ExtResource("1_qvrlq")]([ExtResource("2_5ngjo"), ExtResource("3_500he"), ExtResource("4_v1p7p")])
+metadata/_custom_type_script = "uid://b4jlc55gpfbtg"
