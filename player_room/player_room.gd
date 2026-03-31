@@ -48,7 +48,10 @@ func create_draft_from_pile():
 
 		var selected_card: Card = available_cards.pop_at(random_card_index)
 		draft.append(selected_card)
-	show_cards(draft)
+	if draft.size():
+		show_cards(draft)
+	else:
+		new_turn()
 
 func clear_draft():
 	if current_draft:
@@ -58,15 +61,6 @@ func clear_draft():
 func new_turn():
 	var event_condition_met: Array[StatCondition] = []
 	clear_draft()
-	update_day_turn()
-
-	if turn == 2:
-		var lights_tween = create_tween()
-		lights_tween.tween_property($Room, "modulate", Color("#595959"), $TurnTransitionTimer.wait_time)
-	if turn == 0:
-		var lights_tween = create_tween()
-		lights_tween.tween_property($Room, "modulate", Color("#fff"), $TurnTransitionTimer.wait_time)
-
 
 	if day_passed:
 		day_passed = false
@@ -104,6 +98,14 @@ func show_game_over():
 func restart_game():
 	get_tree().change_scene_to_file(scene_file_path)
 
+func update_room_ambience():
+	if turn == 2:
+		var lights_tween = create_tween()
+		lights_tween.tween_property($Room, "modulate", Color("#595959"), $TurnTransitionTimer.wait_time)
+	if turn == 0:
+		var lights_tween = create_tween()
+		lights_tween.tween_property($Room, "modulate", Color("#fff"), $TurnTransitionTimer.wait_time)
+
 func _on_start_game_pressed():
 	$CanvasLayer2/StartGame.queue_free()
 	%Overlay.hide()
@@ -120,6 +122,8 @@ func _on_card_selected(card: Card):
 func _on_turn_transition_timer_timeout():
 	create_draft_from_pile()
 	connect_cards_signals()
+	update_day_turn()
+	update_room_ambience()
 	turn += 1
 	#Move to next day.
 	if turn == 4:
