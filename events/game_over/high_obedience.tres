@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="StatCondition" format=3 uid="uid://qg3fl8xcvos7"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_ng4n1"]
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="2_ng4n1"]
+[ext_resource type="Script" uid="uid://eg2pbpjd8hmg" path="res://events/game_over.gd" id="3_tk332"]
+[ext_resource type="Script" uid="uid://b6njg8jje7ia3" path="res://stats/stat_condition.gd" id="4_lg1l6"]
+
+[sub_resource type="Resource" id="Resource_ng4n1"]
+script = ExtResource("2_ng4n1")
+game_over = true
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_id7tx"]
+script = ExtResource("1_ng4n1")
+text = "Salir a la calle."
+card_result = SubResource("Resource_ng4n1")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_tk332"]
+script = ExtResource("3_tk332")
+cards = Array[ExtResource("1_ng4n1")]([SubResource("Resource_id7tx")])
+details = "La gente te odia ¿qué esperabas? Una turba furiosa te lincha en la entrada de tu edificio.."
+metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
+
+[resource]
+script = ExtResource("4_lg1l6")
+threshold = 55
+operator = ">"
+event_to_trigger = SubResource("Resource_tk332")
+metadata/_custom_type_script = "uid://b6njg8jje7ia3"

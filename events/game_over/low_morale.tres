@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="StatCondition" format=3 uid="uid://bhx5kyl1ooeus"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_a5prd"]
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="2_dld2k"]
+[ext_resource type="Script" uid="uid://eg2pbpjd8hmg" path="res://events/game_over.gd" id="3_pr71b"]
+[ext_resource type="Script" uid="uid://b6njg8jje7ia3" path="res://stats/stat_condition.gd" id="4_napgf"]
+
+[sub_resource type="Resource" id="Resource_a5prd"]
+script = ExtResource("2_dld2k")
+game_over = true
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_dld2k"]
+script = ExtResource("1_a5prd")
+text = "Abrir los ojos."
+card_result = SubResource("Resource_a5prd")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[sub_resource type="Resource" id="Resource_pr71b"]
+script = ExtResource("3_pr71b")
+cards = Array[ExtResource("1_a5prd")]([SubResource("Resource_dld2k")])
+details = "Despertás en una habitación sintiendo tu propio abrazo. Todo es blanco.
+Cuando lográs aclarar la visión, ves una pequeña ventana. Te parás lentamente, tus pies tocan el suave y acolchonado piso.
+El chaleco te queda un poco ajustado... es lo que hay."
+metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
+
+[resource]
+script = ExtResource("4_napgf")
+modifier_type = 2
+operator = "<="
+event_to_trigger = SubResource("Resource_pr71b")
+metadata/_custom_type_script = "uid://b6njg8jje7ia3"
