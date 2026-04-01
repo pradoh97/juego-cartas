@@ -54,6 +54,8 @@ func create_draft_from_pile():
 		new_turn()
 
 func clear_draft():
+	update_room_ambience()
+
 	if current_draft:
 		current_draft.queue_free()
 		current_draft = null
@@ -123,7 +125,6 @@ func _on_turn_transition_timer_timeout():
 	create_draft_from_pile()
 	connect_cards_signals()
 	update_day_turn()
-	update_room_ambience()
 	turn += 1
 	#Move to next day.
 	if turn == 4:
