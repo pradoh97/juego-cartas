@@ -24,6 +24,13 @@ func throw_dice(amount: int = 1):
 
 	return throw_value
 
+func charge_expenses():
+	var expenses = (stats[Modifier.MODIFIER_TYPE.expenses] as Stat).amount
+	var current_money = (stats[Modifier.MODIFIER_TYPE.money] as Stat).amount
+
+	var money_ui_node = (stats_ui[Modifier.MODIFIER_TYPE.money] as StatUI)
+	money_ui_node.set_value(current_money - expenses)
+
 func set_stats(selected_card: Card):
 	if selected_card.card_result.stats_affected:
 		for card_stat in selected_card.card_result.stats_affected.stats:

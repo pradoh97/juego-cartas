@@ -66,6 +66,7 @@ func new_turn():
 
 	if day_passed:
 		day_passed = false
+		%PlayerStats.charge_expenses()
 		var stats: StatsCollection = %PlayerStats.get_current_stats()
 		event_condition_met = %StatConditionSystem.event_conditions_met(stats)
 
