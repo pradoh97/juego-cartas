@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cj8lkr67agjq3" path="res://player/player_stats.tscn" id="4_1ojmq"]
 [ext_resource type="Resource" uid="uid://butuu5f83a38q" path="res://cards/days/1.tres" id="4_3gq20"]
 [ext_resource type="Resource" uid="uid://lgku1eo7n0lt" path="res://cards/days/2.tres" id="4_5446e"]
-[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="5_4fkm8"]
 [ext_resource type="Resource" uid="uid://bxwcb0t3bi4b4" path="res://cards/days/3.tres" id="5_h4shd"]
 [ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://stats/stat.gd" id="6_d0s76"]
 [ext_resource type="Resource" uid="uid://yq2a0sqn3xnb" path="res://cards/days/4.tres" id="6_i2awh"]
@@ -16,27 +15,16 @@
 [ext_resource type="PackedScene" uid="uid://c7q11ioxhalvj" path="res://stats/stat_condition_system.tscn" id="9_d0s76"]
 [ext_resource type="Script" uid="uid://b6njg8jje7ia3" path="res://stats/stat_condition.gd" id="10_3gq20"]
 [ext_resource type="PackedScene" uid="uid://djy60p3wu6rm5" path="res://game_over.tscn" id="10_excou"]
-[ext_resource type="Script" uid="uid://eg2pbpjd8hmg" path="res://events/game_over.gd" id="11_1t0pb"]
-[ext_resource type="Resource" uid="uid://dl5euqc1gbvkm" path="res://cards/game_over.tres" id="11_358ef"]
+[ext_resource type="Resource" uid="uid://drrhvf3dhpvke" path="res://events/game_over/low_obedience.tres" id="13_h4shd"]
+[ext_resource type="Resource" uid="uid://qg3fl8xcvos7" path="res://events/game_over/high_obedience.tres" id="14_i2awh"]
+[ext_resource type="Resource" uid="uid://yxksbei1hepd" path="res://events/game_over/low_money.tres" id="15_bsun2"]
+[ext_resource type="Resource" uid="uid://bhx5kyl1ooeus" path="res://events/game_over/low_morale.tres" id="16_1x1dy"]
 [ext_resource type="Theme" uid="uid://d0nh77u2jhsq5" path="res://UI/styles/buttons_theme.tres" id="16_j01a8"]
 [ext_resource type="Resource" uid="uid://cnxpq5hq5siut" path="res://cards/modifiers/obedience.tres" id="17_js3qq"]
 [ext_resource type="Resource" uid="uid://lkjncu4uvm1p" path="res://cards/modifiers/money.tres" id="18_qpdo3"]
 [ext_resource type="Resource" uid="uid://d8bxfhgtcfv0" path="res://cards/modifiers/morale.tres" id="19_5446e"]
 [ext_resource type="Resource" uid="uid://bijpjuyi6v2v2" path="res://cards/modifiers/promotion_progress.tres" id="20_h4shd"]
 [ext_resource type="Resource" uid="uid://grlmamxkjejd" path="res://cards/modifiers/expenses.tres" id="21_i2awh"]
-
-[sub_resource type="Resource" id="Resource_358ef"]
-script = ExtResource("11_1t0pb")
-cards = Array[ExtResource("5_4fkm8")]([ExtResource("11_358ef")])
-details = "Los oficiales del gobierno no aprueban tu editorial, te han pedido por favor caer encima de unas cuantas balas."
-metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
-
-[sub_resource type="Resource" id="Resource_1t0pb"]
-script = ExtResource("10_3gq20")
-threshold = 30
-operator = "<"
-event_to_trigger = SubResource("Resource_358ef")
-metadata/_custom_type_script = "uid://b6njg8jje7ia3"
 
 [sub_resource type="Gradient" id="Gradient_hw8qq"]
 offsets = PackedFloat32Array(0)
@@ -45,35 +33,35 @@ colors = PackedColorArray(0, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_8tnse"]
 gradient = SubResource("Gradient_hw8qq")
 
-[sub_resource type="Resource" id="Resource_js3qq"]
+[sub_resource type="Resource" id="Resource_h4shd"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("17_js3qq")
 amount = 40
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_qpdo3"]
+[sub_resource type="Resource" id="Resource_i2awh"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("18_qpdo3")
 amount = 50
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_5446e"]
+[sub_resource type="Resource" id="Resource_bsun2"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("19_5446e")
 amount = 20
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_h4shd"]
+[sub_resource type="Resource" id="Resource_1x1dy"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("20_h4shd")
 amount = 10
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_i2awh"]
+[sub_resource type="Resource" id="Resource_1kup2"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("21_i2awh")
@@ -83,13 +71,13 @@ metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 [node name="PlayerRoom" type="Node2D" unique_id=381902971 node_paths=PackedStringArray("player_stats")]
 script = ExtResource("1_plsfm")
 player_stats = NodePath("CanvasLayer2/PlayerStats")
-days = Array[ExtResource("3_d0s76")]([ExtResource("8_1x1dy"), ExtResource("4_3gq20"), ExtResource("4_5446e"), ExtResource("5_h4shd"), ExtResource("6_i2awh"), ExtResource("7_bsun2")])
+days = Array[ExtResource("3_d0s76")]([ExtResource("4_3gq20"), ExtResource("4_5446e"), ExtResource("5_h4shd"), ExtResource("6_i2awh"), ExtResource("7_bsun2"), ExtResource("8_1x1dy")])
 card_options_scene = ExtResource("2_1ojmq")
 game_over_scene = ExtResource("10_excou")
 
 [node name="StatConditionSystem" parent="." unique_id=566690019 instance=ExtResource("9_d0s76")]
 unique_name_in_owner = true
-conditions = Array[ExtResource("10_3gq20")]([SubResource("Resource_1t0pb")])
+conditions = Array[ExtResource("10_3gq20")]([ExtResource("13_h4shd"), ExtResource("14_i2awh"), ExtResource("15_bsun2"), ExtResource("16_1x1dy")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1039303709]
 layer = -1
@@ -130,11 +118,11 @@ stats_ui = {
 4: NodePath("HBoxContainer/UnboundedStats/Expenses")
 }
 stats = Dictionary[int, ExtResource("6_d0s76")]({
-0: SubResource("Resource_js3qq"),
-1: SubResource("Resource_qpdo3"),
-2: SubResource("Resource_5446e"),
-3: SubResource("Resource_h4shd"),
-4: SubResource("Resource_i2awh")
+0: SubResource("Resource_h4shd"),
+1: SubResource("Resource_i2awh"),
+2: SubResource("Resource_bsun2"),
+3: SubResource("Resource_1x1dy"),
+4: SubResource("Resource_1kup2")
 })
 
 [node name="Overlay" type="PanelContainer" parent="CanvasLayer2" unique_id=1551022721]
