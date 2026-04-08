@@ -6,7 +6,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yxx3c"]
 
 [node name="GameOver" type="PanelContainer" unique_id=794386271]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 145.77777
@@ -40,7 +40,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_y26ei")
-text = "New game"
+text = "Nuevo juego"
 
 [node name="Timer" type="Timer" parent="." unique_id=1174633959]
 wait_time = 2.0

@@ -25,7 +25,7 @@ metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
 
 [resource]
 script = ExtResource("4_ciw3l")
+event_to_trigger = SubResource("Resource_ciw3l")
 modifier_type = 1
 operator = "<="
-event_to_trigger = SubResource("Resource_ciw3l")
 metadata/_custom_type_script = "uid://b6njg8jje7ia3"

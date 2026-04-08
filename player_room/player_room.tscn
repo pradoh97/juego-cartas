@@ -35,35 +35,35 @@ colors = PackedColorArray(0, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_8tnse"]
 gradient = SubResource("Gradient_hw8qq")
 
-[sub_resource type="Resource" id="Resource_i2awh"]
+[sub_resource type="Resource" id="Resource_bsun2"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("17_js3qq")
 amount = 40
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_bsun2"]
+[sub_resource type="Resource" id="Resource_1x1dy"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("18_qpdo3")
 amount = 50
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_1x1dy"]
+[sub_resource type="Resource" id="Resource_1kup2"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("19_5446e")
 amount = 20
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_1kup2"]
+[sub_resource type="Resource" id="Resource_5ttwx"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("20_h4shd")
 amount = 10
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_5ttwx"]
+[sub_resource type="Resource" id="Resource_xk632"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("21_i2awh")
@@ -123,11 +123,11 @@ stats_ui = {
 4: NodePath("HBoxContainer/UnboundedStats/Expenses")
 }
 stats = Dictionary[int, ExtResource("6_d0s76")]({
-0: SubResource("Resource_i2awh"),
-1: SubResource("Resource_bsun2"),
-2: SubResource("Resource_1x1dy"),
-3: SubResource("Resource_1kup2"),
-4: SubResource("Resource_5ttwx")
+0: SubResource("Resource_bsun2"),
+1: SubResource("Resource_1x1dy"),
+2: SubResource("Resource_1kup2"),
+3: SubResource("Resource_5ttwx"),
+4: SubResource("Resource_xk632")
 })
 
 [node name="Overlay" type="PanelContainer" parent="CanvasLayer2" unique_id=1551022721]
@@ -151,7 +151,7 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("16_j01a8")
-text = "New day"
+text = "Día nuevo"
 
 [node name="TurnTransitionTimer" type="Timer" parent="." unique_id=1858436834]
 one_shot = true
