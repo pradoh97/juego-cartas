@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_hlain")
-text = "Comprar desenrroscador de bombillas de luz. Un robot que se asegura que ninguna luz se pueda prender durante las horas de sol. Con eso debería alcanzar ¿no?"
+text = "Buy a light bulb unscrewer robot. A robot that ensures no light can be turned on during daylight hours. With this, should it work, right?"
 card_result = SubResource("Resource_37bvg")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_ic0bi")
-text = "Ver y compartir los últimos videos virales en la red social Happy People."
+text = "Watch and share the latest viral videos on the social network Happy People."
 card_result = SubResource("Resource_m62v5")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

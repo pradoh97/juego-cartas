@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_wxynq")
-text = "Increibles oportunidades laborales para estudiantes: este martes pasado se oficializó la implementación de prácticas profesionalizantes no remuneradas no optativas en restaurantes Mc Daddys y lineas de producción de Happy People Inc. de hasta 6 horas diarias para escolares a partir de 13 años."
+text = "Amazing career opportunities for students: Last Tuesday, the implementation of mandatory, non-remunerated work experience in Mc Daddy's restaurants and Happy People Inc.'s production lines was officially announced, allowing students aged 13 and up to work up to 6 hours per day without pay."
 card_result = SubResource("Resource_aa5q5")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_wxynq")
-text = "Debido a una medida del gobierno anterior, la actividad económica interna se ve afectada y cae un 16% en lo que va del año."
+text = "Due to a measure by the previous government, internal economic activity is affected and decreases by 16% so far this year."
 card_result = SubResource("Resource_aa5q5")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

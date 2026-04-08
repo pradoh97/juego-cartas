@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_wxynq")
-text = "¡Se acerca la ola polar! 3 claves para mantenerse caliente sin prender la estufa y ahorrar."
+text = "Winter is coming: 3 tips to stay cozy without turning on the heater and save energy!"
 card_result = SubResource("Resource_aa5q5")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

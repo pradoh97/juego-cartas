@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_0475u")
-text = "Aceptar la tarjeta de crédito Happy Credit de Happy People Inc. Se puede utilizar para hacer tus compras de supermercado en cómodas cuotas sin intereses."
+text = "Agree to the Happy Credit credit card offer from Happy People Inc., which allows you to make your grocery shopping payments in easy installments without interest."
 card_result = SubResource("Resource_aoljw")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_hlain")
-text = "Cambiar frecuencia de lavado de ropa de una vez al día a dia por medio. Reduce el gasto por lavandería y… creemos que las fibras duran más, o algo así."
+text = "Change the frequency of laundry from once per day to alternate days. Save on laundry costs and... we believe that fibers last longer or something like that."
 card_result = SubResource("Resource_37bvg")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

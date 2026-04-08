@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_0475u")
-text = "Participar en el conteo de votos de la propuesta de reemplazar al personal de recolección de residuos por los eco-androides recoge basura. Nación promete increibles reducciones en las tarifas de limpieza municipal para quienes puedan contar la mayor cantidad de votos positivos."
+text = "Participate in the vote count for the proposal to replace the waste collection personnel with eco-androids that collect trash. Nation promises incredible reductions in municipal cleaning fees for those who can count the highest number of positive votes."
 card_result = SubResource("Resource_aoljw")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

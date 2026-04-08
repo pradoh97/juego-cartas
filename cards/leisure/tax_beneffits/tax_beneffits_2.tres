@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_1784f")
-text = "Participar de la iniciativa gubernamental \"buen ciudadano\" que promete descuentos en los montos finales de sus compras a quienes se afilien y compren solo en los supermercados Happy People Inc. Si se detectan compras en otras tiendas, los beneficios serán revocados."
+text = "Join the government initiative \"Good Citizen\" which promises discounts on the final amounts of their purchases for those who sign up and shop only at Happy People Inc. Supermarkets. If purchases are detected in other stores, the benefits will be revoked."
 card_result = SubResource("Resource_6qfsr")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

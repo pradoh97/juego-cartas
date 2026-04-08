@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_wxynq")
-text = "El reconocido chef Guald Isney revela su fórmula para hacer que el arroz Mullano rinda hasta dos veces mas de lo normal."
+text = "Renowned chef Guald Isney reveals his formula for making Mullan rice yield double the usual amount."
 card_result = SubResource("Resource_aa5q5")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

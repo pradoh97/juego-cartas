@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_ic0bi")
-text = "Ver a tu streamer favorito jugar la última entrega de Loosing Hope, un juego distópico sobre un gobierno totalitario."
+text = "Watch your favorite streamer play the latest installment of Losing Hope, a dystopian game about a totalitarian government."
 card_result = SubResource("Resource_m62v5")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

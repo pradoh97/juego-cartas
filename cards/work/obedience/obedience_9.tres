@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_wxynq")
-text = "Otro logro de la gestión: Tingolia envia sus primeros buques de crudo de petróleo para ser almacenados en las refinerías de nuestra nación. Tras los disturbios y el derrocamiento del anterior gobierno por parte de nuestras fuerzas de paz, la nueva gestión aliada ha decidido que sus recursos están mejor en nuestras manos. Se baraja el despliegue de mas tropas en el mes próximo."
+text = "Another achievement of the current administration: Tingolia sends its first oil tankers for storage in our nation's refineries. Following the unrest and overthrow of the previous government by our peace forces, the new allied government has decided that their resources are better in our hands. The deployment of more troops is being considered for next month."
 card_result = SubResource("Resource_aa5q5")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

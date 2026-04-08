@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_wxynq")
-text = "Se aprueba, por unanimidad, la ley de alivio físcal: la importación y compra de embarcaciones de mediano y largo porte de 13% a 6%. Se incrementan otros impuestos menores para equilibrar la situación fiscal."
+text = "The tax relief bill is unanimously approved: the importation and purchase of medium to large size boats will be reduced from 13% to 6%. Other smaller taxes are increased to balance the fiscal situation."
 card_result = SubResource("Resource_aa5q5")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

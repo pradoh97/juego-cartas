@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_uukot")
-text = "Ir al teatro a ver \"Entre Escotes y Faldas.\" Una historia de tetas y culos del ex secretario municipal."
+text = "Go to the theater to see \"Between Boobs and Skirts\". A story about breasts and butts directed by the former city hall official."
 card_result = SubResource("Resource_v6yll")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

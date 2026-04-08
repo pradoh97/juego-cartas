@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_ic0bi")
-text = "Trajearte e ir a tomar cocteles al club De Caux."
+text = "Get ready for cocktails at the De Caux club."
 card_result = SubResource("Resource_m62v5")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

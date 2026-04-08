@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_wxynq")
-text = "Firma del acuerdo de paz con Corbonia. Tras el exitoso bombardeo a las centrales eléctrias de Corbonia por parte de nuestras fuerzas armadas, nuestro presidente logra la paz entre las dos naciones."
+text = "Peace Agreement with Corbonia signed. Following the successful bombing of Corbonia's electrical power plants by our military forces, our president achieves peace between the two nations."
 card_result = SubResource("Resource_aa5q5")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

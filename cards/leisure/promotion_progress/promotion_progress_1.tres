@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_opk4g")
-text = "Hacer la fila y conseguir las entradas del recital de Spirité Indomavle en primera fila para la esposa del Jefe de Editores."
+text = "Stand in line and get the front row tickets for the Spirit Indomitable concert for the editor's wife."
 card_result = SubResource("Resource_w5pvj")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

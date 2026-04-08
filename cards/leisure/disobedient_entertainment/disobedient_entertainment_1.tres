@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_w2oiw")
-text = "Ir al teatro a ver \"Revolución-a-dos.\" Una historia de una pareja de idealistas abriendose paso en un mundo golpeado y demente."
+text = "Go to the theater to see \"Revolution-a-ted.\". A story of an idealistic couple making their way in an insane world."
 card_result = SubResource("Resource_5una1")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

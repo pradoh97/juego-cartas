@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_wxynq")
-text = "Por motivos logísticos, tras una gala de premiación celebrada en el palacio de gobierno, presidencia deberá posponer la repartición de raciones para la población. Se dará a conocer la nueva fecha la semana próxima."
+text = "Due to logistical reasons, after a reward ceremony held at the Government Palace, the distribution of rations for the population will be postponed. The new date will be announced next week."
 card_result = SubResource("Resource_aa5q5")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

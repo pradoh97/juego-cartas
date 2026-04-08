@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_0475u")
-text = "Participar del programa gubernamental \"Seguridad patriotica\" que promete reducir el costo del impuesto municipal a los participantes que opten por instalar el chip de seguridad gubernamental (Happy People Inc.) en sus celulares."
+text = "Join the government program \"Patriotic Security\" which offers a reduction in municipal taxes for participants who choose to have the government security chip installed by Happy People Inc. on their cell phones."
 card_result = SubResource("Resource_aoljw")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

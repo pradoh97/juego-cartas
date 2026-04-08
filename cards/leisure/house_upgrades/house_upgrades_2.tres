@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_tkkal")
-text = "Cambiar el aire acondicionado por un ventilador de pie. Permite ahorrar en la factura eléctrica y de todas formas, un poco de transpiración no hace mal a nadie."
+text = "Change the air conditioner with a floor fan. This allows for savings on the electric bill and, after all, a little sweating doesn't harm anyone."
 card_result = SubResource("Resource_n4glv")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

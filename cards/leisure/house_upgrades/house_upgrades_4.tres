@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_hlain")
-text = "Comprar inoducha: una ducha inodor, todo en uno. Reduce el gasto y la factura de agua, permitiendote hacer tus necesidades y reciclar esa agua para tus duchas."
+text = "Buy a tower: an all-in-one toilet and shower. Save water and water bill costs, allowing you to fulfill your needs and recycle that water for showers."
 card_result = SubResource("Resource_37bvg")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

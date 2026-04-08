@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_w2oiw")
-text = "Invitar a la vecina unas cervezas y caminar por el paseo de la costa."
+text = "Invite your neighbor for a walk along the coastal promenade."
 card_result = SubResource("Resource_5una1")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

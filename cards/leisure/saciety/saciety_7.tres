@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_f05km")
-text = "Ir a cenar con mamá."
+text = "Go out to dinner with mom."
 card_result = SubResource("Resource_0cvrk")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

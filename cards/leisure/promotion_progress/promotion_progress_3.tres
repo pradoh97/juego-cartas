@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_opk4g")
-text = "Comprar el manuscrito de Tarry Ploster para la Jefa de Fuentes y Tipografías."
+text = "Buy the manuscript of Tarry Ploster for the head of Fonts and Typographies."
 card_result = SubResource("Resource_w5pvj")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

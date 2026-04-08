@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_5agpy")
-text = "Nuevo rascacielos en construcción. Central-Hub, el nuevo desarrollo de Happy People Inc. que incluirá 40 pisos de oficinas. El proyecto se desarrollará en el ya deteriorado Hogar Estatal de Niños."
+text = "New skyscraper under construction: Central-Hub, the new development by Happy People Inc. which will include 40 floors of offices. The project will be developed on the already dilapidated State Home to the Orphane children."
 card_result = SubResource("Resource_t7031")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

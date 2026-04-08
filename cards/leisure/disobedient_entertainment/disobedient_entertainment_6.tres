@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_jd5s0")
-text = "Escribir blog sobre escándalos de corrupción."
+text = "Comment posts about corruption scandals."
 card_result = SubResource("Resource_5una1")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

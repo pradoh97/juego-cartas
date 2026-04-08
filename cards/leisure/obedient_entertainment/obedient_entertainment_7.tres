@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_gfhwe")
-text = "Ver videos de análisis de inversiones, como para tener de qué hablar con tu jefe."
+text = "Watch investment analysis videos to have something to talk about with your boss."
 card_result = SubResource("Resource_m62v5")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

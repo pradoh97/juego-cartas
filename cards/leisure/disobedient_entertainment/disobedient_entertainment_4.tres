@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_w2oiw")
-text = "Asistir a la obra escolar de tu sobrino en el teatro municipal."
+text = "Attend your niece's school play at the municipal theater."
 card_result = SubResource("Resource_5una1")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

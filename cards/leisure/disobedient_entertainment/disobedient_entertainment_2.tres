@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_2b5rh")
-text = "Participar del club de libros en la Casa de la Cultura de la ciudad. Este mes se lee \"autobiografía del yo\"."
+text = "Participate in the book club at the city's Culture House. This month, they will be reading \"autobiography of the self\""
 card_result = SubResource("Resource_pygdu")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

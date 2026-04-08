@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_wxynq")
-text = "Grave ataque de la oposición a la estabilidad social, un grupo de personas radicalizadas pertenecientes al sector de salud bloquean calles y avenidas por supuestos supuestas reducciones de presupuesto. El presidente desmiente estas afirmaciones y analiza enviar al ejercito para frenar a los agresores."
+text = "Serious attack on social stability, a radical group of people associated with the health sector block streets and avenues due to supposed budget cuts. The president denies these claims and considers sending the military to stop the aggressors."
 card_result = SubResource("Resource_aa5q5")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

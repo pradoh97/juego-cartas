@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_f05km")
-text = "Hervir y servir tu última taza de arroz Mullano."
+text = "Cook and serve your last cup of Mullano rice."
 card_result = SubResource("Resource_0cvrk")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

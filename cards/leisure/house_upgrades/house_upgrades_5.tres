@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_hlain")
-text = "Comprar el lavaplatos Lavamal (Happy People Inc.). Reduce el gasto y la factura de agua y elimina la necesidad de comprar esponjas."
+text = "Buy the Dish-a-saster dishwasher by Happy People Inc. Save on water usage and water bill, and eliminate the need to buy sponges."
 card_result = SubResource("Resource_37bvg")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

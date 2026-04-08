@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_f05km")
-text = "Usar cupón de descuento de helado en Frigoretto, 2 cucharadas de cualquier sabor (excepto chocolate, vainilla y frutilla)."
+text = "Use the discount coupon for ice cream at Frigoretto, two scoops of any flavor except chocolate, vanilla, and strawberry."
 card_result = SubResource("Resource_0cvrk")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

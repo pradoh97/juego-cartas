@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_f05km")
-text = "Invitar a la vecina a comer pastas con salsa casera."
+text = "Invite your neighbor to eat homemade pasta with sauce."
 card_result = SubResource("Resource_0cvrk")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
