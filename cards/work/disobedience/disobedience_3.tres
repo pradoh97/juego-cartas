@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_wupfm")
-text = "El gobernador del distrito 4 renuncia a su cargo tras una denuncia por supuesto lavado de activos."
+text = "El gobernador del distrito 4 renuncia a su puesto tras darse a conocer los resultados de la investigación del abogado general del partido revolucionario, se encontró un yate y 4 departamentos a su nombre y sin declarar."
 card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
