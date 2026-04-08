@@ -1,8 +1,9 @@
 [gd_resource type="Resource" script_class="Modifier" format=3 uid="uid://cnxpq5hq5siut"]
 
+[ext_resource type="Texture2D" uid="uid://d17ism4drxma8" path="res://cards/modifiers/obedience.png" id="1_r1plt"]
 [ext_resource type="Script" uid="uid://oxdfipc21itw" path="res://stats/modifier.gd" id="1_xvw36"]
 
 [resource]
 script = ExtResource("1_xvw36")
-icon = "🤝"
+icon = ExtResource("1_r1plt")
 metadata/_custom_type_script = "uid://oxdfipc21itw"

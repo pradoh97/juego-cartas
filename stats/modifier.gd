@@ -9,5 +9,5 @@ enum MODIFIER_TYPE{
 }
 
 @export var type: MODIFIER_TYPE
-@export var icon: String = ""
+@export var icon: Texture
 @export var is_bounded: bool = true
