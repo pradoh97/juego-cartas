@@ -81,7 +81,6 @@ disobedient_win_event = ExtResource("13_5ttwx")
 
 [node name="StatConditionSystem" parent="." unique_id=566690019 instance=ExtResource("9_d0s76")]
 unique_name_in_owner = true
-disabled = true
 conditions = Array[ExtResource("10_3gq20")]([ExtResource("13_h4shd"), ExtResource("14_i2awh"), ExtResource("15_bsun2"), ExtResource("16_1x1dy")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1039303709]
