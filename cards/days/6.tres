@@ -8,12 +8,15 @@
 [ext_resource type="Resource" uid="uid://b8fak4gjt3t4p" path="res://cards/work/disobedience/disobedience_12.tres" id="4_5ngjo"]
 [ext_resource type="Resource" uid="uid://fenj0we0eoad" path="res://cards/leisure/tax_beneffits/tax_beneffits_4.tres" id="4_v1p7p"]
 [ext_resource type="Resource" uid="uid://daawed774ugh2" path="res://cards/work/disobedience/disobedience_13.tres" id="5_500he"]
+[ext_resource type="Resource" uid="uid://dn8h0ktn5nvc5" path="res://cards/leisure/disobedient_entertainment/disobedient_entertainment_6.tres" id="5_v1p7p"]
+[ext_resource type="Resource" uid="uid://byoqf4lxm5q4i" path="res://cards/leisure/obedient_entertainment/obedient_entertainment_8.tres" id="6_37xcl"]
 [ext_resource type="Resource" uid="uid://ds56wxbuhbwi8" path="res://cards/work/obedience/obedience_11.tres" id="6_v1p7p"]
 [ext_resource type="Resource" uid="uid://bsm5mtqhi4ax4" path="res://cards/work/obedience/obedience_12.tres" id="7_37xcl"]
+[ext_resource type="Resource" uid="uid://bbul2bcdnpnj0" path="res://cards/leisure/saciety/saciety_8.tres" id="7_sgs0n"]
 [ext_resource type="Resource" uid="uid://xtguqaj4k88s" path="res://cards/work/obedience/obedience_13.tres" id="8_sgs0n"]
 
 [resource]
 script = ExtResource("2_h6gug")
 work_cards = Array[ExtResource("1_qvrlq")]([ExtResource("3_210l8"), ExtResource("4_5ngjo"), ExtResource("5_500he"), ExtResource("6_v1p7p"), ExtResource("7_37xcl"), ExtResource("8_sgs0n")])
-leisure_cards = Array[ExtResource("1_qvrlq")]([ExtResource("2_5ngjo"), ExtResource("3_500he"), ExtResource("4_v1p7p")])
+leisure_cards = Array[ExtResource("1_qvrlq")]([ExtResource("2_5ngjo"), ExtResource("3_500he"), ExtResource("4_v1p7p"), ExtResource("5_v1p7p"), ExtResource("6_37xcl"), ExtResource("7_sgs0n")])
 metadata/_custom_type_script = "uid://b4jlc55gpfbtg"

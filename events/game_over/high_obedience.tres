@@ -24,7 +24,7 @@ metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
 
 [resource]
 script = ExtResource("4_lg1l6")
-threshold = 55
-operator = ">"
 event_to_trigger = SubResource("Resource_tk332")
+threshold = 65
+operator = ">"
 metadata/_custom_type_script = "uid://b6njg8jje7ia3"

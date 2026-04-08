@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="GameOver" format=3 uid="uid://ygtlt0hdtis3"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_51s32"]
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="2_6ma00"]
+[ext_resource type="Script" uid="uid://eg2pbpjd8hmg" path="res://events/game_over.gd" id="2_8fkbw"]
+
+[sub_resource type="Resource" id="Resource_iqhbt"]
+script = ExtResource("2_6ma00")
+game_over = true
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_6ma00"]
+script = ExtResource("1_51s32")
+text = "Ir al palacio de gobierno."
+card_result = SubResource("Resource_iqhbt")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[resource]
+script = ExtResource("2_8fkbw")
+cards = Array[ExtResource("1_51s32")]([SubResource("Resource_6ma00")])
+details = "Llegás a las inmediaciones del palacio de gobierno. Un cordón policial impide el ingreso.
+
+Sacás tu anotador y lapicera y comenzás a anotar: \"Primero empujones, luego derribaron las vallas.
+Podía respirar la sangre y la pólvora.
+Heridos y muertos, y, finalmente, 
+la cabeza del presidente rodó por el suelo. Vivió la revolución\""
+metadata/_custom_type_script = "uid://eg2pbpjd8hmg"

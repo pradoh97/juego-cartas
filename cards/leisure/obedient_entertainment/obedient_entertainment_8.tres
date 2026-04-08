@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://byoqf4lxm5q4i"]
+
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="1_y3da2"]
+[ext_resource type="Resource" uid="uid://u5ngvuncpja" path="res://cards/leisure/obedient_entertainment/obedient_entertainment_stats.tres" id="2_sxwhb"]
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="3_f864d"]
+
+[sub_resource type="Resource" id="Resource_m62v5"]
+script = ExtResource("1_y3da2")
+stats_affected = ExtResource("2_sxwhb")
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[resource]
+script = ExtResource("3_f864d")
+text = "Sintonizar el noticiero un rato."
+card_result = SubResource("Resource_m62v5")
+hide_if_shown = null
+metadata/_custom_type_script = "uid://dl871qa6mawf3"

@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://c7q11ioxhalvj" path="res://stats/stat_condition_system.tscn" id="9_d0s76"]
 [ext_resource type="Script" uid="uid://b6njg8jje7ia3" path="res://stats/stat_condition.gd" id="10_3gq20"]
 [ext_resource type="PackedScene" uid="uid://djy60p3wu6rm5" path="res://game_over.tscn" id="10_excou"]
+[ext_resource type="Resource" uid="uid://imxh4mloerhh" path="res://events/game_over/obedient_win_event.tres" id="11_bsun2"]
+[ext_resource type="Resource" uid="uid://ygtlt0hdtis3" path="res://events/game_over/disobedient_win_event.tres" id="13_5ttwx"]
 [ext_resource type="Resource" uid="uid://drrhvf3dhpvke" path="res://events/game_over/low_obedience.tres" id="13_h4shd"]
 [ext_resource type="Resource" uid="uid://qg3fl8xcvos7" path="res://events/game_over/high_obedience.tres" id="14_i2awh"]
 [ext_resource type="Resource" uid="uid://yxksbei1hepd" path="res://events/game_over/low_money.tres" id="15_bsun2"]
@@ -33,35 +35,35 @@ colors = PackedColorArray(0, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_8tnse"]
 gradient = SubResource("Gradient_hw8qq")
 
-[sub_resource type="Resource" id="Resource_h4shd"]
+[sub_resource type="Resource" id="Resource_i2awh"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("17_js3qq")
 amount = 40
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_i2awh"]
+[sub_resource type="Resource" id="Resource_bsun2"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("18_qpdo3")
 amount = 50
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_bsun2"]
+[sub_resource type="Resource" id="Resource_1x1dy"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("19_5446e")
 amount = 20
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_1x1dy"]
+[sub_resource type="Resource" id="Resource_1kup2"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("20_h4shd")
 amount = 10
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_1kup2"]
+[sub_resource type="Resource" id="Resource_5ttwx"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("21_i2awh")
@@ -74,9 +76,12 @@ player_stats = NodePath("CanvasLayer2/PlayerStats")
 days = Array[ExtResource("3_d0s76")]([ExtResource("4_3gq20"), ExtResource("4_5446e"), ExtResource("5_h4shd"), ExtResource("6_i2awh"), ExtResource("7_bsun2"), ExtResource("8_1x1dy")])
 card_options_scene = ExtResource("2_1ojmq")
 game_over_scene = ExtResource("10_excou")
+obedient_win_event = ExtResource("11_bsun2")
+disobedient_win_event = ExtResource("13_5ttwx")
 
 [node name="StatConditionSystem" parent="." unique_id=566690019 instance=ExtResource("9_d0s76")]
 unique_name_in_owner = true
+disabled = true
 conditions = Array[ExtResource("10_3gq20")]([ExtResource("13_h4shd"), ExtResource("14_i2awh"), ExtResource("15_bsun2"), ExtResource("16_1x1dy")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1039303709]
@@ -118,11 +123,11 @@ stats_ui = {
 4: NodePath("HBoxContainer/UnboundedStats/Expenses")
 }
 stats = Dictionary[int, ExtResource("6_d0s76")]({
-0: SubResource("Resource_h4shd"),
-1: SubResource("Resource_i2awh"),
-2: SubResource("Resource_bsun2"),
-3: SubResource("Resource_1x1dy"),
-4: SubResource("Resource_1kup2")
+0: SubResource("Resource_i2awh"),
+1: SubResource("Resource_bsun2"),
+2: SubResource("Resource_1x1dy"),
+3: SubResource("Resource_1kup2"),
+4: SubResource("Resource_5ttwx")
 })
 
 [node name="Overlay" type="PanelContainer" parent="CanvasLayer2" unique_id=1551022721]

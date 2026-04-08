@@ -5,6 +5,8 @@ class_name PlayerRoom
 @export var days: Array[Day]
 @export var card_options_scene: PackedScene
 @export var game_over_scene: PackedScene
+@export var obedient_win_event: Event
+@export var disobedient_win_event: Event
 
 var day: int = 0
 var turn: int = 0
@@ -70,11 +72,17 @@ func new_turn():
 		var stats: StatsCollection = %PlayerStats.get_current_stats()
 		event_condition_met = %StatConditionSystem.event_conditions_met(stats)
 
-	if day <= days.size() - 1:
+	if days.size()-day == 0:
+		if player_stats.get_current_stats().stats[Modifier.MODIFIER_TYPE.obedience].amount > 50:
+			trigger_game_over(obedient_win_event)
+		else:
+			trigger_game_over(disobedient_win_event)
+	else:
 		if not event_condition_met.size():
 			$TurnTransitionTimer.start()
 		else:
 			%StatConditionSystem.execute_condition_event(event_condition_met)
+
 
 func update_day_turn():
 	var turn_with_offset = turn + 1
@@ -108,6 +116,7 @@ func update_room_ambience():
 	if turn == 0:
 		var lights_tween = create_tween()
 		lights_tween.tween_property($Room, "modulate", Color("#fff"), $TurnTransitionTimer.wait_time)
+
 
 func _on_start_game_pressed():
 	$CanvasLayer2/StartGame.queue_free()

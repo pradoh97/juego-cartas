@@ -24,7 +24,7 @@ metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
 
 [resource]
 script = ExtResource("4_fygr6")
+event_to_trigger = SubResource("Resource_ywfl0")
 threshold = 30
 operator = "<"
-event_to_trigger = SubResource("Resource_ywfl0")
 metadata/_custom_type_script = "uid://b6njg8jje7ia3"

@@ -1,10 +1,12 @@
 extends Node
-
+@export var disabled := false
 @export var conditions: Array[StatCondition]
 var context: Context = Context.new()
 
 func event_conditions_met(stats: StatsCollection) -> Array[StatCondition]:
 	var conditions_met: Array[StatCondition] = []
+	if disabled:
+		return conditions_met
 
 	for stat in stats.stats:
 		var conditions_found = conditions.filter(func(condition): return condition.modifier_type == stat.modifier.type)

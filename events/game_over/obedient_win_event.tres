@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="GameOver" format=3 uid="uid://imxh4mloerhh"]
+
+[ext_resource type="Script" uid="uid://dl871qa6mawf3" path="res://cards/card.gd" id="1_lcxns"]
+[ext_resource type="Script" uid="uid://eg2pbpjd8hmg" path="res://events/game_over.gd" id="2_v6ic4"]
+[ext_resource type="Script" uid="uid://dvwoo10jrp0hj" path="res://cards/card_result.gd" id="2_xqf38"]
+
+[sub_resource type="Resource" id="Resource_t46ni"]
+script = ExtResource("2_xqf38")
+game_over = true
+metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
+
+[sub_resource type="Resource" id="Resource_xk632"]
+script = ExtResource("1_lcxns")
+text = "Trabar las puertas y apagar las luces."
+card_result = SubResource("Resource_t46ni")
+metadata/_custom_type_script = "uid://dl871qa6mawf3"
+
+[resource]
+script = ExtResource("2_v6ic4")
+cards = Array[ExtResource("1_lcxns")]([SubResource("Resource_xk632")])
+details = "Escuchás los gritos. Corrés a trabar la puerta. Antés de que la cerradura haga \"click\", 6 personas derriban tu puerta. Poco a poco dejás de sentir tu cara, tus manos...
+Finalmente, la luz se apaga."
+metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
