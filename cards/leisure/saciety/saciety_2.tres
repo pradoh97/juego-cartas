@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_7j742")
-text = "Participar del programa gubernamental \"Seguridad patriotica\" que promete reducir el costo del impuesto municipal a los participantes que opten por instalar el chip de seguridad gubernamental (Happy People Inc.) en sus celulares."
+text = "Calentar las sobras del guiso de ayer."
 card_result = SubResource("Resource_cadcn")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
