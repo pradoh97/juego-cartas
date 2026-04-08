@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_7uib3")
-text = "Masivas protestas contra la invasión a la República de Tingolia y la vuelta del servicio militar. Empleados portuarios se niegan a descargar el crudo de los cargueros."
+text = "Mass protests against the invasion of the Republic of Tingolia and the reinstatement of conscription. Port workers refuse to unload the crude oil from cargo ships."
 card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

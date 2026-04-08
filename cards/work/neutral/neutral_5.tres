@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_55fal")
-text = "El equipo nacional de polo en bicicleta triunfó ante la selección de movilidad asistida de Bremoria. Los festejos se extienden a lo largo de la nación."
+text = "The national bicycle polo team triumphs over the assisted mobility selection of Bremoria. Celebrations spread across the nation."
 card_result = SubResource("Resource_oiw6k")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

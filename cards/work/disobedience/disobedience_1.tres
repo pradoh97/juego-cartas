@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_qogbc")
-text = "Corrupción en la cámara de comercio, arriban al país 13 computadoras usadas de un intercambio con Zarambique."
+text = "Corruption in the Chamber of Commerce, 13 used computers arrive from an exchange with Zarambique."
 card_result = SubResource("Resource_cc4jn")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

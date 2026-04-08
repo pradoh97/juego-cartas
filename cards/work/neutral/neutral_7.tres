@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_3r88k")
-text = "La feria de emprendedores cancela sus tres encuentros por baja cantidad de inscriptos. Se espera más motivación para el trimestre próximo."
+text = "The entrepreneur fair cancels its three meetings due to low number of registrants. Expectation for increased motivation for the upcoming quarter."
 card_result = SubResource("Resource_oiw6k")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

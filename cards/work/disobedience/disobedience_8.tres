@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_7uib3")
-text = "Tras el quiebre de relaciones con la Nación Popular de Mulla, un kilo de arroz se vuelve oficialmente más caro que la suscripción a la televisión digital."
+text = "Following the breakdown of relations with the Mulla Popular Nation, a kilogram of rice becomes officially more expensive than a subscription to digital television."
 card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

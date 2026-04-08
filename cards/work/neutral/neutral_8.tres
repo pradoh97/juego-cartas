@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_cstxw")
-text = "Para los más chicos: teatro ciego con marionetas y en 3D. El novedoso espectáculo a oscuras que promete se presenta en la ciudad el próximo martes."
+text = "For the little ones: blind theater with puppets and in 3D. The innovative show that promises to be presented in the city is coming next Tuesday."
 card_result = SubResource("Resource_oiw6k")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

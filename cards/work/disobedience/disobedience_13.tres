@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_x63q7")
-text = "¿Qué futuro depara a nuestros niños? Escolares deberan acreditar 1000 horas de trabajo no remunerado en Mc Daddys y Happy People Inc. para poder recibir sus títulos de estudios secundarios completos."
+text = "What does the future hold for our young people? Students need to complete 1000 hours of unpaid work at Mc Daddy's and Happy People Inc in order to receive their high school diplomas."
 card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

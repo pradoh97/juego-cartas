@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_g4bvs")
-text = "27 menores y 11 adolescentes quedarán en la calle tras el anuncio de la demolición del Hogar Estatal de Niños para la construcción del nuevo rascacielos: Central-Hub."
+text = "27 minors and 11 adolescents will be left homeless after the announcement of the demolition of the State Home for Children to make way for the construction of the new skyscraper: Central-Hub."
 card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

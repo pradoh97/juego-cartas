@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_7uib3")
-text = "En lo que va del décimo año de la gestión actual del gobierno, la actividad económica interna disminuyó un 16% en comparacíon al  año anterior. Algunas consultoras privadas preveen el cierre de 120 fábricas y la pérdida de 3000 puestos de trabajo."
+text = "In the tenth year of the current government's tenure, internal economic activity decreased by 16% compared to the previous year. Private consultants predict the closure of 120 factories and the loss of 3000 jobs."
 card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

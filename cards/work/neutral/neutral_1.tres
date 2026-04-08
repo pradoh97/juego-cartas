@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_chvjt")
-text = "El despampanante vestido de la primera dama en el nuevo estreno de la película \"Cumbres Carrascosas\" y quién estuvo detrás de su diseño."
+text = "The extravagant dress of the First Lady in the new premiere of the movie \"Pounded Peaks\" and who was behind its design."
 card_result = SubResource("Resource_dnuvc")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

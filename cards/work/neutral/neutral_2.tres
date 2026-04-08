@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("1_f3hbd")
-text = "¡El cine se reinventa! Tras la baja asistencia los últimos meses, muchas salas del pais comenzarán a servir tragos, comida y contarán con espectáculos de bailarinas."
+text = "The cinema is being reinvented! Due to low attendance in the past few months, many cinemas throughout the country will begin offering drinks, food, and shows featuring seductive dancers."
 card_result = SubResource("Resource_oiw6k")
 hide_if_shown = null
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_odt3c")
-text = "La educación tradicional en el olvido, según el contundente testimonio de una madre que consideró prudente retirar a su hija del colegio para educarla en casa: \"Sus notas no hacen mas que subir, su padre y yo estamos muy contentos con la decisión\"."
+text = "Traditional education falls by the wayside, according to the forceful testimony of a mother who deemed it prudent to withdraw her daughter from school for home-schooling: \"Her grades are only getting better, both my husband and I are very happy with the decision.\""
 card_result = SubResource("Resource_oiw6k")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

@@ -151,7 +151,7 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("16_j01a8")
-text = "Día nuevo"
+text = "New day"
 
 [node name="TurnTransitionTimer" type="Timer" parent="." unique_id=1858436834]
 one_shot = true

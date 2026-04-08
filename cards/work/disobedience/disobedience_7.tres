@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_7uib3")
-text = "Se aprobó el aumento a las tarifas de gas natural, hasta 190% de aumentos en las tarifas de las distribuidoras residenciales."
+text = "The increase in natural gas rates was approved, with residential distributors facing rate hikes of up to 190%."
 card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

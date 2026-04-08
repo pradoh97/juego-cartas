@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_1qwy1")
-text = "\"Compro un penthouse embrujado en las colinas y pasa esto\" la profunda reflexión de un tú tuber sobre si conviene o no ser dueño de un penthouse de 13 habitaciones."
+text = "\"I bought a haunted penthouse in the hills and now this is happened\" a profound reflection by a yacht owner about whether or not it's worth owning a penthouse with 13 rooms."
 card_result = SubResource("Resource_oiw6k")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

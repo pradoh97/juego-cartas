@@ -40,7 +40,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_y26ei")
-text = "Nuevo juego"
+text = "New game"
 
 [node name="Timer" type="Timer" parent="." unique_id=1174633959]
 wait_time = 2.0

@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_ke7s5")
-text = "Las cinco terapias alternativas que cambiaran tu forma de ver la salud ¿es realmente necesario ir al médico? científicos afirman que no."
+text = "The five alternative therapies that will change your perspective on health? Is it really necessary to go to the doctor? Scientists say no."
 card_result = SubResource("Resource_oiw6k")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

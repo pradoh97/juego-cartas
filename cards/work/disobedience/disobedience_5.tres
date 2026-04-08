@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_7uib3")
-text = "Cambios impositivos: se aprueba la ley propuesta por el presidente de la cámara de comercio, incrementa el impuesto a la vivienda y los productos de verdulería y supermercado de 9% a 22% mientras que se verán reducidos los impuestos a embarcaciones de lujo."
+text = "Tax reform: the proposed bill by the head of the Chamber of Commerce is passed, raising the tax on residential properties and goods sold in grocery stores and produce markets from 9% to 22%, while taxes on luxury yachts will be lowered."
 card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

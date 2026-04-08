@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_fahop")
-text = "La Salud en peligro. Empleados del sector de salud fueron reprimidos durante su reclamo por la recomposición salarial. Fueron hospitalizados 13 médicos y nación no descarta incrementar la presencia militar para frenar el avance."
+text = "Health at risk. Health workers were repressed during their demand for salary restructuring. 13 doctors were hospitalized and the nation does not rule out increasing military presence to stop the advancement."
 card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"

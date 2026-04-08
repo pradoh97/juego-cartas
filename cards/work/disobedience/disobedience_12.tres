@@ -11,6 +11,6 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [resource]
 script = ExtResource("3_pr0ij")
-text = "Fiestas privadas y derroche, hay reportes de que presidencia utilizó las raciones de la repartición comunal para la gala de Happy People Inc. se cancela la repartición de raciones para la población de esta semana. Aún no se sabe cuando será la próxima entrega."
+text = "Private parties and excess, there are reports that the presidency used the rations from the communal distribution for the gala of Happy People Inc. The distribution of rations for this week's population is cancelled, it is still unknown when the next delivery will be made."
 card_result = SubResource("Resource_kypo8")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
