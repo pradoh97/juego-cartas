@@ -11,7 +11,7 @@ func initialize(modifier: Modifier):
 	else:
 		$Value.queue_free()
 		$ProgressBar.visible = true
-	$Icon.text = modifier.icon
+	$Icon.texture = modifier.icon_alt
 
 
 func set_value(new_value: int, no_transition=false):

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0rl7igatku25"]
 
 [ext_resource type="Script" uid="uid://b2i61nus1ybpy" path="res://UI/stat_ui.gd" id="1_7y51h"]
+[ext_resource type="Texture2D" uid="uid://cenl33newja51" path="res://cards/modifiers/obedience.png" id="2_u2bcp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btcp5"]
 bg_color = Color(0, 0, 0, 0.42745098)
@@ -38,11 +39,10 @@ theme_override_constants/separation = 16
 alignment = 1
 script = ExtResource("1_7y51h")
 
-[node name="Icon" type="Label" parent="." unique_id=76140166]
+[node name="Icon" type="TextureRect" parent="." unique_id=267987026]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "⚔️"
-vertical_alignment = 1
+texture = ExtResource("2_u2bcp")
+expand_mode = 2
 
 [node name="Value" type="Label" parent="." unique_id=441018817]
 visible = false

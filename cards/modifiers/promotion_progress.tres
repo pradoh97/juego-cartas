@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="Modifier" format=3 uid="uid://bijpjuyi6v2v2"]
 
 [ext_resource type="Script" uid="uid://oxdfipc21itw" path="res://stats/modifier.gd" id="1_e5pog"]
+[ext_resource type="Texture2D" uid="uid://b3o65j7t20vmc" path="res://cards/modifiers/promotion_progress.png" id="1_tqhge"]
 
 [resource]
 script = ExtResource("1_e5pog")
 type = 3
 icon = "💼"
+icon_alt = ExtResource("1_tqhge")
 metadata/_custom_type_script = "uid://oxdfipc21itw"
