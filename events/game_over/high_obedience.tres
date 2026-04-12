@@ -12,14 +12,14 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [sub_resource type="Resource" id="Resource_id7tx"]
 script = ExtResource("1_ng4n1")
-text = "Salir a la calle."
+text = "Going out into the street."
 card_result = SubResource("Resource_ng4n1")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
 
 [sub_resource type="Resource" id="Resource_tk332"]
 script = ExtResource("3_tk332")
 cards = Array[ExtResource("1_ng4n1")]([SubResource("Resource_id7tx")])
-details = "La gente te odia ¿qué esperabas? Una turba furiosa te lincha en la entrada de tu edificio.."
+details = "The people hates you, what did you expect? A furious mob lynches you at the entrance to your building."
 metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
 
 [resource]

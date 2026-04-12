@@ -11,13 +11,12 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [sub_resource type="Resource" id="Resource_xk632"]
 script = ExtResource("1_lcxns")
-text = "Trabar las puertas y apagar las luces."
+text = "Lock the doors and hide."
 card_result = SubResource("Resource_t46ni")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
 
 [resource]
 script = ExtResource("2_v6ic4")
 cards = Array[ExtResource("1_lcxns")]([SubResource("Resource_xk632")])
-details = "Escuchás los gritos. Corrés a trabar la puerta. Antés de que la cerradura haga \"click\", 6 personas derriban tu puerta. Poco a poco dejás de sentir tu cara, tus manos...
-Finalmente, la luz se apaga."
+details = "You hear people screaming. You try to lock the door. Before hearing the \"click\", six people is walking into your apartment. Gradually you stop feeling your face, hands... Finally, the light goes out."
 metadata/_custom_type_script = "uid://eg2pbpjd8hmg"

@@ -6,12 +6,7 @@
 [ext_resource type="Script" uid="uid://b4jlc55gpfbtg" path="res://cards/day.gd" id="3_d0s76"]
 [ext_resource type="PackedScene" uid="uid://cj8lkr67agjq3" path="res://player/player_stats.tscn" id="4_1ojmq"]
 [ext_resource type="Resource" uid="uid://butuu5f83a38q" path="res://cards/days/1.tres" id="4_3gq20"]
-[ext_resource type="Resource" uid="uid://lgku1eo7n0lt" path="res://cards/days/2.tres" id="4_5446e"]
-[ext_resource type="Resource" uid="uid://bxwcb0t3bi4b4" path="res://cards/days/3.tres" id="5_h4shd"]
 [ext_resource type="Script" uid="uid://dxw0nd4jyb835" path="res://stats/stat.gd" id="6_d0s76"]
-[ext_resource type="Resource" uid="uid://yq2a0sqn3xnb" path="res://cards/days/4.tres" id="6_i2awh"]
-[ext_resource type="Resource" uid="uid://dswxdxfmqcite" path="res://cards/days/5.tres" id="7_bsun2"]
-[ext_resource type="Resource" uid="uid://cnwntmy3e3ufw" path="res://cards/days/6.tres" id="8_1x1dy"]
 [ext_resource type="PackedScene" uid="uid://c7q11ioxhalvj" path="res://stats/stat_condition_system.tscn" id="9_d0s76"]
 [ext_resource type="Script" uid="uid://b6njg8jje7ia3" path="res://stats/stat_condition.gd" id="10_3gq20"]
 [ext_resource type="PackedScene" uid="uid://djy60p3wu6rm5" path="res://game_over.tscn" id="10_excou"]
@@ -35,35 +30,35 @@ colors = PackedColorArray(0, 0, 0, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_8tnse"]
 gradient = SubResource("Gradient_hw8qq")
 
-[sub_resource type="Resource" id="Resource_bsun2"]
+[sub_resource type="Resource" id="Resource_js3qq"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("17_js3qq")
 amount = 40
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_1x1dy"]
+[sub_resource type="Resource" id="Resource_qpdo3"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("18_qpdo3")
 amount = 50
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_1kup2"]
+[sub_resource type="Resource" id="Resource_5446e"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("19_5446e")
 amount = 20
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_5ttwx"]
+[sub_resource type="Resource" id="Resource_h4shd"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("20_h4shd")
 amount = 10
 metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 
-[sub_resource type="Resource" id="Resource_xk632"]
+[sub_resource type="Resource" id="Resource_i2awh"]
 resource_local_to_scene = true
 script = ExtResource("6_d0s76")
 modifier = ExtResource("21_i2awh")
@@ -73,7 +68,7 @@ metadata/_custom_type_script = "uid://dxw0nd4jyb835"
 [node name="PlayerRoom" type="Node2D" unique_id=381902971 node_paths=PackedStringArray("player_stats")]
 script = ExtResource("1_plsfm")
 player_stats = NodePath("CanvasLayer2/PlayerStats")
-days = Array[ExtResource("3_d0s76")]([ExtResource("4_3gq20"), ExtResource("4_5446e"), ExtResource("5_h4shd"), ExtResource("6_i2awh"), ExtResource("7_bsun2"), ExtResource("8_1x1dy")])
+days = Array[ExtResource("3_d0s76")]([ExtResource("4_3gq20")])
 card_options_scene = ExtResource("2_1ojmq")
 game_over_scene = ExtResource("10_excou")
 obedient_win_event = ExtResource("11_bsun2")
@@ -122,11 +117,11 @@ stats_ui = {
 4: NodePath("HBoxContainer/UnboundedStats/Expenses")
 }
 stats = Dictionary[int, ExtResource("6_d0s76")]({
-0: SubResource("Resource_bsun2"),
-1: SubResource("Resource_1x1dy"),
-2: SubResource("Resource_1kup2"),
-3: SubResource("Resource_5ttwx"),
-4: SubResource("Resource_xk632")
+0: SubResource("Resource_js3qq"),
+1: SubResource("Resource_qpdo3"),
+2: SubResource("Resource_5446e"),
+3: SubResource("Resource_h4shd"),
+4: SubResource("Resource_i2awh")
 })
 
 [node name="Overlay" type="PanelContainer" parent="CanvasLayer2" unique_id=1551022721]

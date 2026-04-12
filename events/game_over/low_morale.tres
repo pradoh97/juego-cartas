@@ -12,16 +12,14 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [sub_resource type="Resource" id="Resource_dld2k"]
 script = ExtResource("1_a5prd")
-text = "Abrir los ojos."
+text = "Open your eyes."
 card_result = SubResource("Resource_a5prd")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
 
 [sub_resource type="Resource" id="Resource_pr71b"]
 script = ExtResource("3_pr71b")
 cards = Array[ExtResource("1_a5prd")]([SubResource("Resource_dld2k")])
-details = "Despertás en una habitación sintiendo tu propio abrazo. Todo es blanco.
-Cuando lográs aclarar la visión, ves una pequeña ventana. Te parás lentamente, tus pies tocan el suave y acolchonado piso.
-El chaleco te queda un poco ajustado... es lo que hay."
+details = "You wake up in a room hugging yourself. Everything is white. When you manage to clear your vision, you see a small window. You stand slowly, your feet touch the soft and cushioned floor. Your jacket fits a bit tight... that's all there is."
 metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
 
 [resource]

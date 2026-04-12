@@ -11,17 +11,12 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [sub_resource type="Resource" id="Resource_6ma00"]
 script = ExtResource("1_51s32")
-text = "Ir al palacio de gobierno."
+text = "Go to the government palace."
 card_result = SubResource("Resource_iqhbt")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
 
 [resource]
 script = ExtResource("2_8fkbw")
 cards = Array[ExtResource("1_51s32")]([SubResource("Resource_6ma00")])
-details = "Llegás a las inmediaciones del palacio de gobierno. Un cordón policial impide el ingreso.
-
-Sacás tu anotador y lapicera y comenzás a anotar: \"Primero empujones, luego derribaron las vallas.
-Podía respirar la sangre y la pólvora.
-Heridos y muertos, y, finalmente, 
-la cabeza del presidente rodó por el suelo. Vivió la revolución\""
+details = "You arrive at the government palace. A police cordon prevents entry. You take out your notepad and pen and start writing: \"First they pushed, then they knocked over the barriers. I could smell blood and gunpowder. Wounded and dead. And, finally, the president's head rolled on the floor. A revolution.\""
 metadata/_custom_type_script = "uid://eg2pbpjd8hmg"

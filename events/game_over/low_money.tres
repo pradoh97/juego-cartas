@@ -12,15 +12,14 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [sub_resource type="Resource" id="Resource_wkdjc"]
 script = ExtResource("1_khgqm")
-text = "Salir a la calle."
+text = "Go out into the street."
 card_result = SubResource("Resource_32f50")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
 
 [sub_resource type="Resource" id="Resource_ciw3l"]
 script = ExtResource("3_wkdjc")
 cards = Array[ExtResource("1_khgqm")]([SubResource("Resource_wkdjc")])
-details = "\"Desde el banco, sabemos que es una situación difícil para usted y querémos ofrecerle todo nuestro apoyo, no se preocupe.\".
-El banco se queda con tu casa... y tu hamster, la próxima conseguí mas dinero."
+details = "\"From the bank, we know that this is a difficult situation for you and we want to offer you all our support, don't worry.\" The bank takes your house... and your hamster, next time earn more money."
 metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
 
 [resource]

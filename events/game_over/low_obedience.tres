@@ -12,14 +12,14 @@ metadata/_custom_type_script = "uid://dvwoo10jrp0hj"
 
 [sub_resource type="Resource" id="Resource_qcpvk"]
 script = ExtResource("1_636gm")
-text = "Abrir la puerta."
+text = "Open the door."
 card_result = SubResource("Resource_636gm")
 metadata/_custom_type_script = "uid://dl871qa6mawf3"
 
 [sub_resource type="Resource" id="Resource_ywfl0"]
 script = ExtResource("3_ywfl0")
 cards = Array[ExtResource("1_636gm")]([SubResource("Resource_qcpvk")])
-details = "Los oficiales del gobierno no aprueban tu editorial, te han pedido por favor caer encima de unas cuantas balas."
+details = "Government officials have not approved your editorial; they have asked you, please, to commit suicide by shooting yourself with a few bullets."
 metadata/_custom_type_script = "uid://eg2pbpjd8hmg"
 
 [resource]
